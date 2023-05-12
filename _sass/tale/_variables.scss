@@ -1,0 +1,32 @@
+// Colors
+$default-color: #111111 !default;
+$default-shade: #010101 !default;
+$default-tint: #aaa !default;
+$grey-1: #979797 !default;
+$grey-2: #e5e5e5 !default;
+$grey-3: #f9f9f9 !default;
+$white: #ffffff !default;
+$blue: #1679cf !default;
+$shadow-color: rgba(0, 0, 0, .2) !default;
+$code-color: #b44b56 !default;
+
+// Fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+$serif-primary: 'Inter', serif !default;
+$serif-secondary: Inter, 'Inter',  serif !default;
+$sans-serif: 'Inter', sans-serif !default;
+$monospaced: Menlo, Monaco, monospace !default;
+
+@mixin box-sizing($type: border-box) {
+  -webkit-box-sizing: $type;
+     -moz-box-sizing: $type;
+          box-sizing: $type;
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+     -moz-transition: $args;
+          transition: $args;
+}
