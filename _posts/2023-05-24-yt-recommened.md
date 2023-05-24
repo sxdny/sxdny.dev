@@ -2,9 +2,8 @@
 layout: post
 title: "Recommended YouTube Channels"
 author: "Sidney Silva"
-description: "No self control..."
 tags: YouTube Productivity Tech Inspiration
-excerpt_separator: <!--more-->
+sticky: true
 ---
 
 Hello!
