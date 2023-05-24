@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Recommended YouTube Channels"
+title: "Helpful YouTube Channels"
 author: "Sidney Silva"
 tags: YouTube Productivity Tech Inspiration
 ---
@@ -9,9 +9,11 @@ Hello!
 
 Now that I was rearranging my YouTube subscriptions, I thought that it was a good idea to post a list about interesting and useful YouTube channels of my subscription list to help you find good content on the platform.
 
-So, without further ado, here are my **recommended YouTube channels list:**:
+So, without further ado, here are my **recommended YouTube channels list:**
 
 ## Self-help channels.
+
+Channels for improving yourself, your habits and your mentality.
 
 - [Dave Caya](https://www.youtube.com/@davecaya) (Self-help videos and little films)
 - [mregbe](https://www.youtube.com/@mregbe) (Self-help tips)
@@ -21,7 +23,9 @@ So, without further ado, here are my **recommended YouTube channels list:**:
 - [Troublesomess](https://www.youtube.com/@troublesomess) (Self-help tips)
 - [Psych2go](https://www.youtube.com/@Psych2go) (Mental health and psychology animated content)
 
-## Productivity and self-financial advices
+## Productivity and financial advices
+
+Channels for achieve better productivity and some financial advices
 
 - [Ali Abdaal](https://www.youtube.com/@aliabdaal) (Productivity expert)
 - [James Scholz](https://www.youtube.com/@JamesScholz) (Productivity tips and study sessions)
@@ -34,6 +38,8 @@ So, without further ado, here are my **recommended YouTube channels list:**:
 
 ## Inspiration
 
+Channels for inspiration.
+
 - [Art Support](https://www.youtube.com/@ArtSupport1) (Motivation and inspiration for artists)
 - [AWGE](https://www.youtube.com/@awge5050) (Be yourself and do whatever you wanna do)
 - [kevin](https://www.youtube.com/@camc0rder17) (Vintage videos with VHS cammera)
@@ -41,6 +47,8 @@ So, without further ado, here are my **recommended YouTube channels list:**:
 - [Gawx2](https://www.youtube.com/@Gawx2) (Gawx with a camera)
 
 ## Tech
+
+Channels for useful tech reviews, courses and more!
 
 - [the roadmap](https://www.youtube.com/@roadmapsh) (Good for learning how to code)
 - [Nate Gentile](https://www.youtube.com/@NateGentile7) (Spanish tech reviews and more)
