@@ -3,7 +3,6 @@ layout: post
 title: "Recommended YouTube Channels"
 author: "Sidney Silva"
 tags: YouTube Productivity Tech Inspiration
-sticky: true
 ---
 
 Hello!
