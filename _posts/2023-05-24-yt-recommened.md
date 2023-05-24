@@ -25,7 +25,7 @@ Channels for improving yourself, your habits and your mentality.
 
 ## Productivity and financial advices
 
-Channels for achieve better productivity and some financial advices
+Channels for achieve better productivity and for some financial advices.
 
 - [Ali Abdaal](https://www.youtube.com/@aliabdaal) (Productivity expert)
 - [James Scholz](https://www.youtube.com/@JamesScholz) (Productivity tips and study sessions)
@@ -34,7 +34,7 @@ Channels for achieve better productivity and some financial advices
 - [Linking your thinking](https://www.youtube.com/@linkingyourthinking) (**Obsidian** app and note-taking tips)
 - [Productividad con Ruben Loan](https://www.youtube.com/@RubenLoan) (Spanish channel about productivity)
 - [Tiago Forte](https://www.youtube.com/@TiagoForte) (He shows you how to build a second brain with note-taking apps)
-- [Nicholad Garafola](https://www.youtube.com/@NicholasGarofola) (Money and digital minimalism)
+- [Nicholas Garafola](https://www.youtube.com/@NicholasGarofola) (Money and digital minimalism)
 
 ## Inspiration
 
@@ -42,7 +42,7 @@ Channels for inspiration.
 
 - [Art Support](https://www.youtube.com/@ArtSupport1) (Motivation and inspiration for artists)
 - [AWGE](https://www.youtube.com/@awge5050) (Be yourself and do whatever you wanna do)
-- [kevin](https://www.youtube.com/@camc0rder17) (Vintage videos with VHS cammera)
+- [kevin](https://www.youtube.com/@camc0rder17) (Vintage videos with a VHS cammera)
 - [Luis](https://www.youtube.com/@LuisLuis) (Italian YouTuber who makes vlogs)
 - [Gawx2](https://www.youtube.com/@Gawx2) (Gawx with a camera)
 
