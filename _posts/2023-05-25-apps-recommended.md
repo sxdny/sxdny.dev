@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Best Apps to boost productivity"
+title: "Best Apps for better study"
 author: "Sidney Silva"
 tags: Apps Productivity Tech Android
 ---
@@ -13,7 +13,7 @@ But one day, I noticed that my brain can't handle most of the information I need
 
 Since that day, I always tried to improve the way that I take notes and study for exams until last year, that I discovered (thanks to YouTube) a couple Apps and Programs that I could install on my phone.
 
-So, here's my personal list of **Apps to boost your productivity:**
+So, here's my personal list of **Apps for better and study and also productivity:**
 
 ## 1. Obsidian / Notion
 
