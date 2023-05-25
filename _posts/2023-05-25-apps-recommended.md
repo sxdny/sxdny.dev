@@ -59,9 +59,13 @@ It's free, the noises are cool and they have a very good quality and you can als
 
 Very cool and really recommended.
 
+<br>
+
 ---
 
-So, those are the apps for today. Wish you guys a good day and Bye! 🙌
+<br>
+
+So, those are the apps for today. Wish you guys have a good day and Bye! 🙌
 
 
 
