@@ -11,7 +11,7 @@ Everyone has goals and important things to do everyday. When i was at High Schoo
 
 But one day, I noticed that my brain can't handle most of the information I needed to remember or store for my exams. So I started to think: **"How do I remember ALL these things?"**
 
-Since that day, I always tried to improve the way that I take notes and study for exams until last year, that I discovered (thanks to YouTube) a couple Apps and Programs that I could install on my phone.
+Since that day, I always tried to improove the way that I take notes and study for exams until last year, that I discovered (thanks to YouTube) a couple Apps and Programs that I could install on my phone.
 
 So, here's my personal list of **Apps for better and study and also productivity:**
 
