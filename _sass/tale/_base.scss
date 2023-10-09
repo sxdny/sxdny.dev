@@ -10,6 +10,22 @@ body {
   padding: 0;
 }
 
+// dark mode colors
+@media (prefers-color-scheme: dark) {
+  html {
+    $default-color-dark: #f9f9f9;
+    $default-shade-dark: #f0f0f0;
+    $default-tint-dark: #aaa;
+    $grey-1: #ececec !default;
+    $grey-2: #010101 !default;
+    $grey-3: #111111 !default;
+    $white: #000000 !default;
+    $blue: #fde143 !default;
+    $shadow-color: rgba(255, 255, 255, 0.2) !default;
+    $code-color: #5db44b !default;
+  }
+}
+
 html {
   font-family: $serif-primary;
   font-size: 14px;
