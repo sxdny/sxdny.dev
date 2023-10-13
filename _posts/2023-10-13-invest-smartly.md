@@ -1,4 +1,9 @@
-# Invest smartly
+---
+layout: post
+title: "Invest smartly"
+author: "Sidney Silva"
+tags: Money Ideas
+---
 
 I just finished reading a very interesting article by Stephen Ango, called *Buy wisely*.
 
