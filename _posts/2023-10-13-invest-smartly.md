@@ -39,7 +39,7 @@ Hope this helps you, bless you and have a good day!
 
 ---
 
-Source: https://stephango.com/buy-wisely
+Original post: [here](https://stephango.com/buy-wisely).
 
 
 
