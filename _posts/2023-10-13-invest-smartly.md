@@ -29,11 +29,11 @@ Then, you will need to assess the durability of the product. In order to do that
 - Does it have a guarantee?
 - Does it rely on other products or technologies that aren’t durable?
 
-Not everything has to fill all the boxes, but is it better if the do or at least, the majority of them.
+Not everything has to fill all the boxes, but is it better if they do or at least, the majority of them.
 
 I will try to apply this idea now that I need to buy a couple of things (and I barely have money).
 
-Being real, I don't have money (yet).
+Being real, I don't have any money (yet).
 
 Hope this helps you, bless you and have a good day!
 
