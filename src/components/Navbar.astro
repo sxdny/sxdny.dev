@@ -1,0 +1,87 @@
+---
+const { name } = Astro.props;
+---
+
+<nav>
+    <div
+        class="fixed px-5 lg:px-[20em] flex lg:justify-between flex-col lg:flex-row w-screen backdrop-blur-md py-[2em]"
+    >
+        <header class="flex justify-between">
+            <h2 class="text-white font-heading tracking-tight text-xl">
+                {name}
+            </h2>
+            <div class="lg:hidden flex">
+                <button class="text-white">
+                    <svg
+                        class="w-6 h-6 fill-white self-center"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 16 16"
+                        width="16"
+                        height="16"
+                        ><path
+                            d="M1 2.75A.75.75 0 0 1 1.75 2h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 2.75Zm0 5A.75.75 0 0 1 1.75 7h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 7.75ZM1.75 12h12.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5Z"
+                        ></path>
+                    </svg>
+                </button>
+            </div>
+        </header>
+        <footer class="lg:block hidden transition-all">
+            <ul
+                class="flex text-start lg:flex-row gap-5 flex-col justify-between pt-5 lg:p-0 lg:gap-10 font-inter animate-fade-down animate-duration-[400ms] animate-ease-out lg:animate-none"
+            >
+                <li>
+                    <a
+                        href="#about"
+                        class="font-thin transition-colors text-gray-400 hover:text-white"
+                    >
+                        About Me
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="#projects"
+                        class="font-thin transition-colors text-gray-400 hover:text-white"
+                    >
+                        Projects
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="#blog"
+                        class="font-thin transition-colors text-gray-400 hover:text-white"
+                    >
+                        Blog
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="#contact"
+                        class="font-thin transition-colors text-gray-400 hover:text-white"
+                    >
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </footer>
+    </div>
+</nav>
+
+<script>
+    const nav = document.querySelector("nav");
+    const button = nav!.querySelector("button");
+    const footer = nav!.querySelector("footer");
+
+    button?.addEventListener("click", () => {
+        footer?.classList.toggle("hidden");
+    });
+
+    // esto es lo que hace que el color del navbar cambie cuando se hace scroll
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 0) {
+            nav?.classList.add("bg-gray-900");
+        } else {
+            nav?.classList.remove("bg-gray-900");
+        }
+    });
+
+</script>
