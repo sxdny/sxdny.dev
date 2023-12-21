@@ -25,9 +25,9 @@ const { name } = Astro.props;
                 </button>
             </div>
         </header>
-        <footer class="lg:block hidden transition-all">
+        <footer class="lg:block transition-all">
             <ul
-                class="flex text-start lg:flex-row gap-5 flex-col justify-between pt-5 lg:p-0 lg:gap-10 font-inter animate-fade-down animate-duration-[400ms] animate-ease-out lg:animate-none"
+                class="text-start lg:flex-row gap-5 flex-col justify-between pt-5 lg:p-0 lg:gap-10 font-inter lg:animate-none lg:transition-none flex"
             >
                 <li>
                     <a
@@ -66,13 +66,49 @@ const { name } = Astro.props;
     </div>
 </nav>
 
+<style>
+    .fade-in-out {
+        transition: opacity 1s ease-in-out;
+        opacity: 1;
+    }
+
+    .fade-out {
+        transition: opacity 0.3s ease-in-out;
+        opacity: 0;
+    }
+
+    @media (max-width: 1024px) {
+        ul {
+            transition: opacity 0.3s ease-in-out;
+        }
+    }
+</style>
+
 <script>
     const nav = document.querySelector("nav");
     const button = nav!.querySelector("button");
     const footer = nav!.querySelector("footer");
+    const ul = nav!.querySelector("ul");
 
     button?.addEventListener("click", () => {
-        footer?.classList.toggle("hidden");
+
+        button.disabled = true;
+
+        if (footer?.classList.contains("fade-out")) {
+            footer?.classList.remove("hidden");
+            setTimeout(() => {
+                footer?.classList.remove("fade-out");
+                ul?.classList.remove("fade-out");
+                button.disabled = false;
+            }, 10);
+        } else {
+            footer?.classList.add("fade-out");
+            ul?.classList.add("fade-out");
+            setTimeout(() => {
+                footer?.classList.add("hidden");
+                button.disabled = false;
+            }, 300);
+        }
     });
 
     // esto es lo que hace que el color del navbar cambie cuando se hace scroll
@@ -84,4 +120,13 @@ const { name } = Astro.props;
         }
     });
 
+    window.addEventListener("resize", () => {
+        if (window.innerWidth >= 1150) {
+            footer?.classList.remove("fade-out");
+            ul?.classList.remove("fade-out");
+            footer?.classList.remove("hidden");
+        } else {
+            footer?.classList.add("hidden");
+        }
+    });
 </script>
