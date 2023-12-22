@@ -25,9 +25,11 @@ const { name } = Astro.props;
                 </button>
             </div>
         </header>
-        <footer class="lg:block transition-all fade-out hidden">
+        <footer
+            class="lg:flex transition-all lg:animate-none lg:transition-none hidden"
+        >
             <ul
-                class="text-start lg:flex-row gap-5 flex-col justify-between pt-5 lg:p-0 lg:gap-10 font-inter lg:animate-none lg:transition-none flex"
+                class="text-start lg:flex-row gap-5 flex-col justify-between pt-5 lg:p-0 lg:gap-10 font-inter transition-all fade-out lg:animate-none lg:transition-none flex"
             >
                 <li>
                     <a
@@ -82,6 +84,13 @@ const { name } = Astro.props;
             transition: opacity 0.3s ease-in-out;
         }
     }
+
+    @media (min-width: 1150px) {
+        .fade-out {
+            animation: none !important;
+            transition: none !important;
+        }
+    }
 </style>
 
 <script>
@@ -91,7 +100,6 @@ const { name } = Astro.props;
     const ul = nav!.querySelector("ul");
 
     button?.addEventListener("click", () => {
-
         button.disabled = true;
 
         if (footer?.classList.contains("hidden")) {
@@ -102,7 +110,6 @@ const { name } = Astro.props;
                 button.disabled = false;
             }, 10);
         } else {
-            footer?.classList.add("fade-out");
             ul?.classList.add("fade-out");
             setTimeout(() => {
                 footer?.classList.add("hidden");
@@ -122,12 +129,19 @@ const { name } = Astro.props;
 
     window.addEventListener("resize", () => {
         if (window.innerWidth >= 1150) {
-            footer?.classList.remove("fade-out");
-            ul?.classList.remove("fade-out");
             footer?.classList.remove("hidden");
+            ul?.classList.remove("fade-out");
         } else {
             footer?.classList.add("hidden");
-            footer?.classList.add("fade-out");
+            ul?.classList.add("fade-out");
         }
     });
+
+    window.onload = () => {
+        if (window.innerWidth >= 1150) {
+            ul?.classList.remove("fade-out");
+        } else {
+            ul?.classList.add("fade-out");
+        }
+    };
 </script>
