@@ -1,147 +1,122 @@
 ---
+import Hamburguer from "./Hamburguer.astro";
+import NavLink from "./NavLink.astro";
+
 const { name } = Astro.props;
 ---
 
 <nav>
-    <div
-        class="fixed px-5 lg:px-[20em] flex lg:justify-between flex-col lg:flex-row w-screen backdrop-blur-md py-[2em]"
+  <div
+    class="fixed px-5 lg:px-[20em] flex lg:justify-between flex-col lg:flex-row w-screen backdrop-blur-md py-[2em]"
+  >
+    <header class="flex justify-between items-center">
+      <a href="#home" class="text-white font-heading tracking-tight text-xl">
+        {name}
+      </a>
+      <button>
+        <div class="lg:hidden flex">
+          <Hamburguer />
+        </div>
+      </button>
+    </header>
+    <footer
+      class="lg:flex transition-all lg:animate-none lg:transition-none hidden"
     >
-        <header class="flex justify-between">
-            <h2 class="text-white font-heading tracking-tight text-xl">
-                {name}
-            </h2>
-            <div class="lg:hidden flex">
-                <button class="text-white">
-                    <svg
-                        class="w-6 h-6 fill-white self-center"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 16 16"
-                        width="16"
-                        height="16"
-                        ><path
-                            d="M1 2.75A.75.75 0 0 1 1.75 2h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 2.75Zm0 5A.75.75 0 0 1 1.75 7h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 7.75ZM1.75 12h12.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5Z"
-                        ></path>
-                    </svg>
-                </button>
-            </div>
-        </header>
-        <footer
-            class="lg:flex transition-all lg:animate-none lg:transition-none hidden"
-        >
-            <ul
-                class="text-start lg:flex-row gap-5 flex-col justify-between pt-5 lg:p-0 lg:gap-10 font-inter transition-all fade-out lg:animate-none lg:transition-none flex"
-            >
-                <li>
-                    <a
-                        href="#about"
-                        class="font-thin transition-colors text-gray-400 hover:text-white"
-                    >
-                        About Me
-                    </a>
-                </li>
-                <li>
-                    <a
-                        href="#projects"
-                        class="font-thin transition-colors text-gray-400 hover:text-white"
-                    >
-                        Projects
-                    </a>
-                </li>
-                <li>
-                    <a
-                        href="#blog"
-                        class="font-thin transition-colors text-gray-400 hover:text-white"
-                    >
-                        Blog
-                    </a>
-                </li>
-                <li>
-                    <a
-                        href="#contact"
-                        class="font-thin transition-colors text-gray-400 hover:text-white"
-                    >
-                        Contact
-                    </a>
-                </li>
-            </ul>
-        </footer>
-    </div>
+      <ul
+        class="text-start lg:flex-row gap-5 flex-col justify-between pt-5 lg:p-0 lg:gap-10 font-inter transition-all fade-out lg:animate-none lg:transition-none flex"
+      >
+        <NavLink link="#home" title="About Me"/>
+        <NavLink link="#projects" title="Projects"/>
+        <NavLink link="#blog" title="Blog"/>
+        <NavLink link="#contact" title="Contact"/>
+      </ul>
+    </footer>
+  </div>
 </nav>
 
 <style>
-    .fade-in-out {
-        transition: opacity 1s ease-in-out;
-        opacity: 1;
-    }
+  .fade-in-out {
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+  }
 
+  .fade-out {
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+  }
+
+  @media (max-width: 1024px) {
+    ul {
+      transition: opacity 0.3s ease-in-out;
+    }
+  }
+
+  @media (min-width: 1150px) {
     .fade-out {
-        transition: opacity 0.3s ease-in-out;
-        opacity: 0;
+      animation: none !important;
+      transition: none !important;
     }
-
-    @media (max-width: 1024px) {
-        ul {
-            transition: opacity 0.3s ease-in-out;
-        }
-    }
-
-    @media (min-width: 1150px) {
-        .fade-out {
-            animation: none !important;
-            transition: none !important;
-        }
-    }
+  }
 </style>
 
 <script>
-    const nav = document.querySelector("nav");
-    const button = nav!.querySelector("button");
-    const footer = nav!.querySelector("footer");
-    const ul = nav!.querySelector("ul");
+  const nav = document.querySelector("nav");
+  const button = nav!.querySelector("button");
+  const footer = nav!.querySelector("footer");
+  const ul = nav!.querySelector("ul");
+  const buttonIcon = button!.querySelector("svg");
 
-    button?.addEventListener("click", () => {
-        button.disabled = true;
+  let estado = false;
 
-        if (footer?.classList.contains("hidden")) {
-            footer?.classList.remove("hidden");
-            setTimeout(() => {
-                footer?.classList.remove("fade-out");
-                ul?.classList.remove("fade-out");
-                button.disabled = false;
-            }, 10);
-        } else {
-            ul?.classList.add("fade-out");
-            setTimeout(() => {
-                footer?.classList.add("hidden");
-                button.disabled = false;
-            }, 300);
-        }
-    });
+  button?.addEventListener("click", () => {
+    button.disabled = true;
+    estado = !estado;
 
-    // esto es lo que hace que el color del navbar cambie cuando se hace scroll
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > 0) {
-            nav?.classList.add("bg-gray-900");
-        } else {
-            nav?.classList.remove("bg-gray-900");
-        }
-    });
+    if (footer?.classList.contains("hidden")) {
+      footer?.classList.remove("hidden");
+      setTimeout(() => {
+        footer?.classList.remove("fade-out");
+        ul?.classList.remove("fade-out");
+        button.disabled = false;
+      }, 10);
+    } else {
+      ul?.classList.add("fade-out");
+      setTimeout(() => {
+        footer?.classList.add("hidden");
+        button.disabled = false;
+      }, 300);
+    }
+  });
 
-    window.addEventListener("resize", () => {
-        if (window.innerWidth >= 1150) {
-            footer?.classList.remove("hidden");
-            ul?.classList.remove("fade-out");
-        } else {
-            footer?.classList.add("hidden");
-            ul?.classList.add("fade-out");
-        }
-    });
+  // esto es lo que hace que el color del navbar cambie cuando se hace scroll
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 0) {
+      nav?.classList.add("bg-gray-900");
+    } else {
+      nav?.classList.remove("bg-gray-900");
+    }
+  });
 
-    window.onload = () => {
-        if (window.innerWidth >= 1150) {
-            ul?.classList.remove("fade-out");
-        } else {
-            ul?.classList.add("fade-out");
-        }
-    };
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 1150 && !estado) {
+      footer?.classList.remove("hidden");
+      ul?.classList.remove("fade-out");
+
+      // cambiamos el icono del menu
+      buttonIcon?.innerHTML;
+
+      // cambiamos el icono del menu
+    } else if (window.innerWidth < 1150 && !estado) {
+      footer?.classList.add("hidden");
+      ul?.classList.add("fade-out");
+    }
+  });
+
+  window.onload = () => {
+    if (window.innerWidth >= 1150) {
+      ul?.classList.remove("fade-out");
+    } else {
+      ul?.classList.add("fade-out");
+    }
+  };
 </script>
