@@ -25,10 +25,10 @@ const { name } = Astro.props;
       <ul
         class="text-start lg:flex-row gap-5 flex-col justify-between pt-5 lg:p-0 lg:gap-10 font-inter transition-all fade-out lg:animate-none lg:transition-none flex"
       >
-        <NavLink link="#home" title="About Me"/>
-        <NavLink link="#projects" title="Projects"/>
-        <NavLink link="#blog" title="Blog"/>
-        <NavLink link="#contact" title="Contact"/>
+        <NavLink link="#home" title="About Me" />
+        <NavLink link="#projects" title="Projects" />
+        <NavLink link="#blog" title="Blog" />
+        <NavLink link="#contact" title="Contact" />
       </ul>
     </footer>
   </div>
@@ -51,7 +51,7 @@ const { name } = Astro.props;
     }
   }
 
-  @media (min-width: 1150px) {
+  @media (min-width: 1024px) {
     .fade-out {
       animation: none !important;
       transition: none !important;
@@ -61,6 +61,7 @@ const { name } = Astro.props;
 
 <script>
   const nav = document.querySelector("nav");
+  const div = nav!.querySelector("div");
   const button = nav!.querySelector("button");
   const footer = nav!.querySelector("footer");
   const ul = nav!.querySelector("ul");
@@ -74,6 +75,8 @@ const { name } = Astro.props;
 
     if (footer?.classList.contains("hidden")) {
       footer?.classList.remove("hidden");
+      div?.classList.add("border-b");
+      div?.classList.add("border-gray-700");
       setTimeout(() => {
         footer?.classList.remove("fade-out");
         ul?.classList.remove("fade-out");
@@ -83,6 +86,8 @@ const { name } = Astro.props;
       ul?.classList.add("fade-out");
       setTimeout(() => {
         footer?.classList.add("hidden");
+        div?.classList.remove("border-b");
+        div?.classList.remove("border-gray-700");
         button.disabled = false;
       }, 300);
     }
@@ -98,22 +103,32 @@ const { name } = Astro.props;
   });
 
   window.addEventListener("resize", () => {
-    if (window.innerWidth >= 1150 && !estado) {
+    if (window.innerWidth >= 1024) {
+      div?.classList.remove("border-b");
+      div?.classList.remove("border-gray-700");
+    }
+    else {
+      if (estado) {
+        div?.classList.add("border-b");
+        div?.classList.add("border-gray-700");
+      }
+    }
+
+    if (window.innerWidth >= 1024 && !estado) {
       footer?.classList.remove("hidden");
       ul?.classList.remove("fade-out");
-
       // cambiamos el icono del menu
       buttonIcon?.innerHTML;
 
       // cambiamos el icono del menu
-    } else if (window.innerWidth < 1150 && !estado) {
+    } else if (window.innerWidth < 1024 && !estado) {
       footer?.classList.add("hidden");
       ul?.classList.add("fade-out");
     }
   });
 
   window.onload = () => {
-    if (window.innerWidth >= 1150) {
+    if (window.innerWidth >= 1024) {
       ul?.classList.remove("fade-out");
     } else {
       ul?.classList.add("fade-out");

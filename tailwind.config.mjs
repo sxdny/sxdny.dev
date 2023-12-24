@@ -7,10 +7,6 @@ export default {
 			'inter' : ['Inter', 'sans-serif'],
 		},
 		extend: {
-			screens: {
-				'lg': '1150px',
-				// => @media (min-width: 1150px) { ... }
-			},
 			animation: {
 				fade: 'fadeOut 5s ease-in-out',
 			},
