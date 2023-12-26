@@ -7,7 +7,7 @@ const { name } = Astro.props;
 
 <nav>
   <div
-    class="fixed px-5 lg:px-[20em] flex lg:justify-between flex-col lg:flex-row w-screen backdrop-blur-md py-[1.5em]"
+    class="father z-50 fixed px-5 lg:px-[20em] flex lg:justify-between flex-col lg:flex-row w-screen py-[1.5em]"
   >
     <header class="flex justify-between items-center">
       <a href="#home" class="text-white font-heading tracking-tight text-xl">
@@ -35,6 +35,9 @@ const { name } = Astro.props;
 </nav>
 
 <style>
+  div.father {
+    backdrop-filter: blur(5px);
+  }
   .fade-in-out {
     transition: opacity 1s ease-in-out;
     opacity: 1;

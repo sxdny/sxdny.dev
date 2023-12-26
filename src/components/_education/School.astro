@@ -1,0 +1,63 @@
+---
+interface Props {
+  name: string;
+  degree: string;
+  date: string;
+  state: string;
+  location: string;
+}
+
+const { name, degree, date, state, location, description } = Astro.props;
+---
+
+<div class="school flex w-full">
+  <div class="period w-[30%] text-start flex flex-col gap-3">
+    <p class="font-bold text-white text-lg">{date}</p>
+    <!-- Indicator -->
+    <div class="status_education flex items-center pb-5">
+      <span class="w-2 h-2 mr-2 bg-lime-500 rounded-full"></span>
+      <p class="text-lime-500">{state}</p>
+    </div>
+  </div>
+  <div class="company w-[70%] text-start flex flex-col gap-1">
+    <p class="text-gray-300">
+      {degree}
+    </p>
+    <div class="link flex items-center gap-1">
+      <a href="#ramis" class="link text-white underline">{name}</a>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 16 16"
+        class="inline-block fill-white"
+        width="16"
+        height="16"
+        ><path
+          d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2Zm6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1Z"
+        ></path>
+      </svg>
+    </div>
+    <p class="location text-gray-600">{location}</p>
+  </div>
+</div>
+
+<script>
+    // Cambiar estilo de la barra de estado
+    const status = document.querySelector('.status_education');
+    const statusIndicator = document.querySelector('.status span');
+    const statusText = document.querySelector('.status p');
+
+    window.onload = () => {
+        console.log(statusText?.innerHTML);
+      if (statusText?.innerHTML === 'In progress') {
+        statusIndicator?.classList.remove('bg-lime-500');
+        statusIndicator?.classList.add('bg-yellow-500');
+        statusText.classList.remove('text-lime-500');
+        statusText.classList.add('text-yellow-500');
+      } else if (statusText?.innerHTML === 'Finished') {
+        statusIndicator?.classList.remove('bg-lime-500');
+        statusIndicator?.classList.add('bg-red-500');
+        statusText.classList.remove('text-lime-500');
+        statusText.classList.add('text-red-500');
+      }
+    };
+</script>
