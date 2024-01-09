@@ -1,16 +1,16 @@
 ---
 interface Props {
-  link?: string | URL | null | undefined;
+  href?: string | URL | null | undefined;
   title: string;
 }
 
-const { link, title } = Astro.props;
+const { href, title } = Astro.props;
 ---
 
 <li>
   <a
     class="font-thin transition-colors text-gray-400 hover:text-white"
-    href={link}
+    href={href}
     >{title}
   </a>
 </li>

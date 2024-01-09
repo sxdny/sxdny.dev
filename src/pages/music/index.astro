@@ -1,0 +1,33 @@
+---
+import Navbar from "../../components/Navbar.astro";
+import Fonts from "../../components/Fonts.astro";
+import Footer from "../../components/Footer.astro";
+
+const title = "Music";
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SIDNEY SILVA | {title}</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?" />
+    <Fonts />
+  </head>
+  <body class="bg-neutral-950 text-center gap-2">
+    <Navbar name="sxdny" />
+
+    <section class="flex w-screen justify-center pt-5 mt-5">
+      <div class="px-5 w-[47rem] flex flex-col gap-4 text-start text-gray-300">
+        <h2
+          class="text-white font-medium tracking-tight text-xl sm:text-2xl font-heading"
+        >
+          Coming soon...
+        </h2>
+        <p class="text-sm sm:text-base font-inter">Not available yet.</p>
+      </div>
+    </section>
+
+    <Footer />
+  </body>
+</html>

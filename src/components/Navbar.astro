@@ -1,145 +1,28 @@
 ---
-import Hamburguer from "./Hamburguer.astro";
 import NavLink from "./NavLink.astro";
 
 const { name } = Astro.props;
 ---
 
-<nav>
+<nav class="text-sm sm:text-base flex w-screen justify-center">
   <div
-    class="father z-50 fixed px-5 lg:px-[20em] flex lg:justify-between flex-col lg:flex-row w-screen py-[1.5em]"
+    class="px-5 w-[47rem] flex justify-between flex-row py-[1.5em]"
   >
     <header class="flex justify-between items-center">
-      <a href="#home" class="text-white font-heading tracking-tight text-xl">
+      <a href="/" class="text-white font-heading tracking-tight text-lg sm:text-xl">
         {name}
       </a>
-      <button>
-        <div class="lg:hidden flex">
-          <Hamburguer />
-        </div>
-      </button>
     </header>
     <footer
-      class="lg:flex transition-all lg:animate-none lg:transition-none hidden"
+      class="flex transition-all lg:animate-none lg:transition-none"
     >
       <ul
-        class="text-start lg:flex-row gap-5 flex-col justify-between pt-5 lg:p-0 lg:gap-10 font-inter transition-all lg:animate-none lg:transition-none flex "
+        class="flex text-start flex-row gap-5 justify-between font-inter transition-all"
       >
-        <NavLink link="#home" title="About Me" />
-        <NavLink link="#projects" title="Projects" />
-        <NavLink link="#blog" title="Blog" />
-        <NavLink link="#contact" title="Contact" />
+        <NavLink href="/blog" title="Blog" />
+        <NavLink href="/music" title="Music" />
       </ul>
     </footer>
   </div>
 </nav>
 
-<style>
-  div.father {
-    backdrop-filter: blur(15px);
-    bix-shadow: 0 0 10px 0 rgb(0 0 0 / 50%);
-  }
-  .fade-in-out {
-    transition: opacity 1s ease-in-out;
-    opacity: 1;
-  }
-
-  .fade-out {
-    transition: opacity 0.3s ease-in-out;
-    opacity: 0;
-  }
-
-  @media (max-width: 1024px) {
-    ul {
-      transition: opacity 0.3s ease-in-out;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .fade-out {
-      animation: none !important;
-      transition: none !important;
-    }
-  }
-
-  div.father {
-    background-color: rgb(0, 0, 0, 0.85);
-  }
-</style>
-
-<script>
-  const nav = document.querySelector("nav");
-  const div = nav!.querySelector("div");
-  const button = nav!.querySelector("button");
-  const footer = nav!.querySelector("footer");
-  const ul = nav!.querySelector("ul");
-  const buttonIcon = button!.querySelector("svg");
-
-  let estado = false;
-
-  button?.addEventListener("click", () => {
-    button.disabled = true;
-    estado = !estado;
-
-    if (footer?.classList.contains("hidden")) {
-      footer?.classList.remove("hidden");
-      div?.classList.add("border-b");
-      div?.classList.add("border-gray-700");
-      setTimeout(() => {
-        footer?.classList.remove("fade-out");
-        ul?.classList.remove("fade-out");
-        button.disabled = false;
-      }, 10);
-    } else {
-      ul?.classList.add("fade-out");
-      setTimeout(() => {
-        footer?.classList.add("hidden");
-        div?.classList.remove("border-b");
-        div?.classList.remove("border-gray-700");
-        button.disabled = false;
-      }, 300);
-    }
-  });
-
-  // esto es lo que hace que el color del navbar cambie cuando se hace scroll
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 0) {
-      nav?.classList.add("bg-gray-900");
-    } else {
-      nav?.classList.remove("bg-gray-900");
-    }
-  });
-
-  window.addEventListener("resize", () => {
-    if (window.innerWidth >= 1024) {
-      div?.classList.remove("border-b");
-      div?.classList.remove("border-gray-700");
-    }
-    else {
-      if (estado) {
-        div?.classList.add("border-b");
-        div?.classList.add("border-gray-700");
-      }
-    }
-
-    if (window.innerWidth >= 1024 && !estado) {
-      footer?.classList.remove("hidden");
-      ul?.classList.remove("fade-out");
-      // cambiamos el icono del menu
-      buttonIcon?.innerHTML;
-
-      // cambiamos el icono del menu
-    } else if (window.innerWidth < 1024 && !estado) {
-      footer?.classList.add("hidden");
-      ul?.classList.add("fade-out");
-    }
-  });
-
-  window.onload = () => {
-    if (window.innerWidth >= 1024) {
-      ul?.classList.remove("fade-out");
-    } else {
-      ul?.classList.add("fade-out");
-    }
-  };
-</script>
