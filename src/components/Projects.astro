@@ -1,0 +1,42 @@
+---
+const projects = await Astro.glob("./_projects/*.md");
+---
+
+<section class="flex w-screen justify-center pt-5">
+  <div class="px-5 w-[47rem] flex flex-col gap-4 text-start text-gray-300">
+    <h2 class="text-white font-medium tracking-tight text-xl sm:text-2xl font-heading">
+      Projects
+    </h2>
+    <ul class="grid grid-cols-2 gap-5">
+      <!-- Renderizamos los primeros 3 proyectos -->
+      {
+        projects.slice(0, 3).map((project) => (
+          <li class="flex flex-col gap-1">
+            <a
+              class="bg-neutral-950 p-3 rounded border-[1px] border-neutral-700 hover:bg-neutral-900 transition-colors"
+              href={project.frontmatter.url}
+            >
+              <h2 class="text-white font-heading font-medium tracking-tight text-base sm:text-lg">
+                {project.frontmatter.title}
+              </h2>
+              <p class="text-gray-400 font-inter text-xs sm:text-sm">
+                {project.frontmatter.description}
+              </p>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <!-- Si hay más de 3 proyectos, renderizamos el botón de "Ver más" -->
+    {
+      projects.length > 6 && (
+        <a
+          href="/projects"
+          class="text-white font-heading font-medium tracking-tight underline text-lg"
+        >
+          Ver más →
+        </a>
+      )
+    }
+  </div>
+</section>

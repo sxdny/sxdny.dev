@@ -1,0 +1,27 @@
+---
+import Navbar from "../components/Navbar.astro";
+import Fonts from "../components/Fonts.astro";
+import Bio from "../components/Bio.astro";
+import Projects from "../components/Projects.astro";
+import Blog from "../components/Blog.astro";
+import Footer from "../components/Footer.astro";
+
+const { title } = Astro.props;
+---
+
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>SIDNEY SILVA | {title}</title>
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?" />
+        <Fonts />
+    </head>
+    <body class="bg-neutral-950 text-center gap-2">
+        <Navbar name="sxdny" />
+        <Bio />
+        <Projects />
+        <Blog />
+        <Footer />
+    </body>
+</html>

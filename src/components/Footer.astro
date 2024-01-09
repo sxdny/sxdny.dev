@@ -1,0 +1,33 @@
+---
+const socials = await Astro.glob('./_socials/*.md')
+---
+
+<footer
+  class="w-screen flex bg-neutral-950 justify-center border-t-[1px] border-neutral-700 fixed inset-x-0 bottom-0"
+>
+  <div class="px-5 w-[47rem] flex justify-between text-start py-3 font-inter items-center">
+    <!-- Footer -->
+
+    <p class="text-neutral-600 text-xs sm:text-sm">
+      be you
+    </p>
+
+    <ul class="socials flex justify-between gap-3 items-center">
+        {
+            socials.map(social => (
+                <li>
+                    <a
+                        href={ social.frontmatter.url }
+                        rel="noopener noreferrer"
+                        class="text-xs sm:text-sm text-neutral-600 hover:text-neutral-500"
+                    >
+                        { social.frontmatter.title }
+                    </a>
+                </li>
+            )
+            )
+        }
+    </ul>
+  </div>
+</footer>
+
