@@ -1,7 +1,7 @@
 ---
 title: "sxdnyOS"
 url: "https://github.com/sxdny/sxdnyOS"
-description: "El mundo de la informática está a punto de cambiar."
+description: "My custom OS made in C++."
 ---
 
 # sxdnyOS
