@@ -19,6 +19,7 @@ export default {
 		},
 	},
 	plugins: [
-		require('tailwindcss-animated')
+		require('tailwindcss-animated'),
+		require('@tailwindcss/typography')
 	],
 }

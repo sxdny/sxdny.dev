@@ -11,13 +11,13 @@ const { frontmatter } = Astro.props;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>SIDNEY SILVA | {frontmatter.title}</title>
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?" />
     <Fonts />
   </head>
   <body class="bg-neutral-950 text-center gap-2">
     <Navbar name="sxdny" />
 
-    <section class="flex w-screen justify-center pt-5 mt-5">
+    <section class="flex justify-center pt-5 mt-5">
       <div class="px-5 w-[47rem] flex flex-col gap-4 text-start text-gray-300 font-inter">
 
         <div class="flex flex-col gap-1">
@@ -25,7 +25,7 @@ const { frontmatter } = Astro.props;
             <p class="text-xs sm:text-sm text-neutral-500">{frontmatter.autor} · {frontmatter.date}</p>
         </div>
 
-        <div class="flex flex-col gap-4 post leading-7 text-base">
+        <div class="prose prose-p:text-gray-300 prose-p:text-sm prose-p:leading-7 sm:prose-p:text-base  prose-headings:text-white leading-7 text-base">
           <slot />
         </div>
 

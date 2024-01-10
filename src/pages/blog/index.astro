@@ -3,7 +3,7 @@ import Navbar from "../../components/Navbar.astro";
 import Fonts from "../../components/Fonts.astro";
 import Footer from "../../components/Footer.astro";
 
-const title = "Blog";
+const title = "Sidney Silva | Blog";
 const posts = await Astro.glob("./posts/*.md");
 ---
 
@@ -11,7 +11,7 @@ const posts = await Astro.glob("./posts/*.md");
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>SIDNEY SILVA | {title}</title>
+    <title>{title}</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?" />
     <Fonts />
   </head>
@@ -23,6 +23,9 @@ const posts = await Astro.glob("./posts/*.md");
         <h2 class="text-white font-medium tracking-tight text-xl sm:text-2xl font-heading">
           Blog
         </h2>
+        
+        <p class="font-inter flex flex-col gap-[2rem] text-start text-gray-300 text-sm sm:text-base">All my posts. I will try to post once a week.</p>
+  
         <ul class="flex flex-col gap-5">
       <!-- Renderizamos los primeros 3 proyectos -->
       {
