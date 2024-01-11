@@ -9,7 +9,7 @@ url: "consistency"
 
 I really think that being consistent in everything is the key. Whether in sports, content creation, learning a skill, whatever.
 
-For example, the last 3 - 4 months I have been trying to study for at least 1 hour from the most basic to the most complex things.
+For example, the last 3 - 4 months I have been trying to study Maths (to improve my overall grade) for at least 1 hour from the most basic to the most complex things.
 
 ![Consistency is more important than perfection.](../../../images/consistency.png)
 
