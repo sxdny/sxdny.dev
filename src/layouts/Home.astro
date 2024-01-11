@@ -9,7 +9,7 @@ import Footer from "../components/Footer.astro";
 const { title } = Astro.props;
 ---
 
-<html lang="es">
+<html class="h-full" lang="es">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -17,11 +17,13 @@ const { title } = Astro.props;
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?" />
         <Fonts />
     </head>
-    <body class="bg-neutral-950 text-center gap-2">
+    <body class="bg-neutral-950 text-center flex flex-col h-full">
         <Navbar name="sxdny" />
-        <Bio />
-        <Projects />
-        <Blog />
+        <div class="flex-grow">
+            <Bio />
+            <Projects />
+            <Blog />
+        </div>
         <Footer />
     </body>
 </html>

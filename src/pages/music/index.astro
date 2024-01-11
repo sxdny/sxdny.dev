@@ -6,7 +6,7 @@ import Footer from "../../components/Footer.astro";
 const title = "Music";
 ---
 
-<html lang="es">
+<html class="h-full" lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -14,10 +14,10 @@ const title = "Music";
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?" />
     <Fonts />
   </head>
-  <body class="bg-neutral-950 text-center gap-2">
+  <body class="bg-neutral-950 text-center flex flex-col h-full">
     <Navbar name="sxdny" />
 
-    <section class="flex w-screen justify-center pt-5 mt-5">
+    <section class="flex w-screen justify-center pt-5 mt-5 flex-grow">
       <div class="px-5 w-[47rem] flex flex-col gap-4 text-start text-gray-300">
         <h2
           class="text-white font-medium tracking-tight text-xl sm:text-2xl font-heading"
