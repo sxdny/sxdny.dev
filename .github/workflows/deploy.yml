@@ -17,6 +17,8 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
     steps:
       - name: Echo the secret to the console
         run: echo "$PUBLIC_SPOTIFY_CLIENT_ID"
@@ -24,7 +26,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Install, build, and upload your site
         uses: withastro/action@v1
-        secrets:
+        env:
             PUBLIC_SPOTIFY_CLIENT_ID: ${{ secrets.PUBLIC_SPOTIFY_CLIENT_ID }}
             PUBLIC_SPOTIFY_CLIENT_SECRET: ${{ secrets.PUBLIC_SPOTIFY_CLIENT_SECRET }}
             PUBLIC_SPOTIFY_REFRESH_TOKEN: ${{ secrets.PUBLIC_SPOTIFY_REFRESH_TOKEN }}
