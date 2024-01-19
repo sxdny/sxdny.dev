@@ -3,6 +3,15 @@ import Navbar from "../../components/Navbar.astro";
 import Fonts from "../../components/Fonts.astro";
 import Footer from "../../components/Footer.astro";
 
+import { getTopTracks, getNowPlaying } from "../../lib/spotify";
+
+const nowPlaying = await getNowPlaying();
+const tracks = await getTopTracks();
+
+console.log(tracks);
+console.log(nowPlaying.status);
+console.log(nowPlaying);
+
 const title = "Music";
 ---
 
@@ -17,17 +26,66 @@ const title = "Music";
   <body class="bg-neutral-950 text-center flex flex-col h-full">
     <Navbar name="sxdny" />
 
-    <section class="flex w-screen justify-center pt-5 mt-5 flex-grow">
-      <div class="px-5 w-[47rem] flex flex-col gap-4 text-start text-gray-300">
+    <section class="flex max-w-[47rem] self-center flex-col justify-center pt-5 my-5 flex-grow">
+
+      <div class="self-center px-5 py-5 flex flex-col gap-4 text-start w-full text-gray-300">
         <h2
           class="text-white font-medium tracking-tight text-xl sm:text-2xl font-heading"
         >
-          Coming soon...
+          Now Playing
         </h2>
-        <p class="text-sm sm:text-base font-inter">Not available yet.</p>
+        {
+          nowPlaying.is_playing === true ? (
+            <div class="flex flex-row items-center space-x-4">
+              <img
+                src={nowPlaying.item.album.images[0].url}
+                alt={nowPlaying.item.name}
+                class="w-16 h-16 border border-neutral-800 rounded rounded-md"
+              />
+              <div class="flex flex-col py-2">
+                <p class="font-inter font-medium text-white">{nowPlaying.item.name}</p>
+                <p class="font-inter">{nowPlaying.item.artists[0].name}</p>
+              </div>
+            </div>
+          ) : (
+            <p class="font-inter flex flex-col gap-[2rem] text-start text-gray-300 text-sm sm:text-base">
+              No estoy escuchando nada en este momento.
+            </p>
+          )
+        }
+      </div>
+
+      <div class="self-center px-5 flex flex-col gap-4 text-start text-gray-300">
+        <h2
+          class="text-white font-medium tracking-tight text-xl sm:text-2xl font-heading"
+        >
+          Top tracks
+        </h2>
+        <p
+          class="font-inter flex flex-col gap-[2rem] text-start text-gray-300 text-sm sm:text-base"
+        >
+          My top most played songs.
+        </p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-5">
+          {
+            tracks.items.map((track: any) => (
+            <div class="flex flex-col items-start">
+                <img
+                  src={track.album.images[0].url}
+                  alt={track.name}
+                  class="w-full h-full border rounded rounded-md border-neutral-800"
+                />
+                <div class="flex flex-col py-2">
+                  <p class="font-inter font-medium text-white">{track.name}</p>
+                  <p class="font-inter">{track.artists[0].name}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+        
       </div>
     </section>
-
     <Footer />
   </body>
 </html>
