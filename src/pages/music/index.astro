@@ -5,10 +5,9 @@ import Footer from "../../components/Footer.astro";
 
 import { getTopTracks, getNowPlaying } from "../../lib/spotify.js";
 
-const nowPlaying = await getNowPlaying();
+// const nowPlaying = await getNowPlaying();
 const tracks = await getTopTracks();
 
-console.log(nowPlaying);
 console.log(tracks);
 
 const title = "Music";
@@ -33,7 +32,7 @@ const title = "Music";
         >
           Now Playing
         </h2>
-        {
+        <!-- {
           nowPlaying.is_playing === true ? (
             <div class="flex flex-row items-center space-x-4">
               <img
@@ -51,7 +50,7 @@ const title = "Music";
               No estoy escuchando nada en este momento.
             </p>
           )
-        }
+        } -->
           Top Songs
         </h2>
 
