@@ -34,6 +34,7 @@ export const getNowPlaying = async () => {
     },
   })
   .then(response => response.json())
+  .catch(error => console.error(error))
 }
 
 export const getTopTracks = async () => {
@@ -45,4 +46,5 @@ export const getTopTracks = async () => {
     },
   },)
   .then(response => response.json())
+  .catch(error => console.error(error))
 }
