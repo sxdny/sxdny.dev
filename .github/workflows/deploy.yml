@@ -23,7 +23,7 @@ jobs:
         PUBLIC_SPOTIFY_REFRESH_TOKEN: ${{ secrets.PUBLIC_SPOTIFY_REFRESH_TOKEN }}
     steps:
       - name: Echo the secret to the console
-        run: echo "This is my secret key ${{ secrets.PUBLIC_SPOTIFY_CLIENT_ID }}"
+        run: echo "$PUBLIC_SPOTIFY_CLIENT_ID"
       - name: Checkout your repository using git
         uses: actions/checkout@v3
       - name: Install, build, and upload your site
