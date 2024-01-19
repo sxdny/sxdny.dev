@@ -20,6 +20,20 @@ jobs:
     environment:
       name: github-pages
     steps:
+    - name: Check if secrets are set
+      run: |
+        if [ -z "$PUBLIC_SPOTIFY_CLIENT_ID" ]; then
+          echo "Set the PUBLIC_SPOTIFY_CLIENT_ID secret"
+          exit 1
+        fi
+        if [ -z "$PUBLIC_SPOTIFY_CLIENT_SECRET" ]; then
+          echo "Set the PUBLIC_SPOTIFY_CLIENT_SECRET secret"
+          exit 1
+        fi
+        if [ -z "$PUBLIC_SPOTIFY_REFRESH_TOKEN" ]; then
+          echo "Set the PUBLIC_SPOTIFY_REFRESH_TOKEN secret"
+          exit 1
+        fi
       - name: Checkout your repository using git
         uses: actions/checkout@v3
       - name: Install, build, and upload your site

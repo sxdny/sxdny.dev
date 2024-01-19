@@ -3,10 +3,10 @@ import Navbar from "../../components/Navbar.astro";
 import Fonts from "../../components/Fonts.astro";
 import Footer from "../../components/Footer.astro";
 
-// import { getTopTracks, getNowPlaying } from "../../lib/spotify.js";
+import { getTopTracks, getNowPlaying } from "../../lib/spotify.js";
 
-// const nowPlaying = await getNowPlaying();
-// const tracks = await getTopTracks();
+const nowPlaying = await getNowPlaying();
+const tracks = await getTopTracks();
 
 const title = "Music";
 ---
@@ -30,7 +30,7 @@ const title = "Music";
         >
           Now Playing
         </h2>
-        <!-- {
+        {
           nowPlaying.is_playing === true ? (
             <div class="flex flex-row items-center space-x-4">
               <img
@@ -48,7 +48,7 @@ const title = "Music";
               No estoy escuchando nada en este momento.
             </p>
           )
-        } -->
+        }
           Top Songs
         </h2>
 
@@ -66,7 +66,7 @@ const title = "Music";
           My top most played songs.
         </p>
         <div class="grid grid-cols-2 sm:grid-cols-3 gap-5">
-          <!-- {
+          {
             tracks.items.map((track: any) => (
             <div class="flex flex-col items-start">
                 <img
@@ -80,7 +80,7 @@ const title = "Music";
                 </div>
               </div>
             ))
-          } -->
+          }
         </div>
         
       </div>
