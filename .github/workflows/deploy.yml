@@ -16,7 +16,6 @@ permissions:
 
 jobs:
   build:
-    secrets: inherit
     runs-on: ubuntu-latest
     env:
         PUBLIC_SPOTIFY_CLIENT_ID: ${{ secrets.PUBLIC_SPOTIFY_CLIENT_ID }}
@@ -29,7 +28,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Install, build, and upload your site
         uses: withastro/action@v1
-
+    secrets: inherit
         # with:
         # path: . # The root location of your Astro project inside the repository. (optional)
         # node-version: 18 # The specific version of Node that should be used to build your site. Defaults to 18. (optional)
