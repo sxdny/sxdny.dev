@@ -32,7 +32,7 @@ const title = "Music";
           Now Playing
         </h2>
         {
-          nowPlaying.is_playing !== false || nowPlaying !== undefined ? (
+          nowPlaying !== undefined ? (
             <div class="flex flex-row items-center space-x-4">
               <img
                 src={nowPlaying.item.album.images[0].url}
