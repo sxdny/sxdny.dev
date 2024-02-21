@@ -1,33 +1,50 @@
 ---
 const projects = await Astro.glob("./_projects/*.md");
+
+import { Badge } from "@/components/ui/badge"
 ---
 
-<section class="flex w-screen justify-center pt-5">
-  <div class="px-5 w-[47rem] flex flex-col gap-4 text-start text-gray-300">
-    <h2 class="text-white font-medium tracking-tight text-xl sm:text-2xl font-heading">
+<section class="flex sm:w-screen justify-center pt-5">
+  <div class="px-5 w-full sm:w-[47rem] flex flex-col gap-4 text-start text-gray-300">
+    <h2
+      class="text-white font-medium tracking-tight text-xl sm:text-2xl font-heading"
+    >
       Projects
     </h2>
-    <ul class="grid grid-cols-2 gap-5">
+    <ul class="sm:grid sm:grid-cols-2 flex flex-col gap-5">
       <!-- Renderizamos los primeros 3 proyectos -->
       {
         projects.slice(0, 3).map((project) => (
           <li class="flex flex-col gap-1">
             <a
-              class="bg-neutral-950 p-3 rounded border-[1px] border-neutral-700 hover:bg-neutral-900 transition-colors"
+              class="bg-neutral-950 rounded border-[1px] border-neutral-700 hover:bg-zinc-900 transition-colors"
               href={project.frontmatter.url}
             >
-              <h2 class="text-white font-heading font-medium tracking-tight text-base sm:text-lg">
-                {project.frontmatter.title}
-              </h2>
-              <p class="text-gray-400 font-inter text-xs sm:text-sm">
-                {project.frontmatter.description}
-              </p>
+              <div>
+                <img src={project.frontmatter.img} alt="{project.frontmatter.title}" class="w-full rounded-t h-40 object-cover border-b border-neutral-700" />
+                </div>
+              <div class="p-3">
+                <h2 class="text-white font-heading font-medium tracking-tight text-base sm:text-lg">
+                  {project.frontmatter.title}
+                </h2>
+                <p class="text-gray-400 font-inter text-xs pretty sm:text-sm">
+                  {project.frontmatter.description}
+                </p>
+                <ul class="mt-2">
+                  {
+                    project.frontmatter.tags.map((tag: any) => (
+                      <li class="inline-block mr-2">
+                        <Badge>{tag}</Badge>
+                      </li>
+                    ))
+                  }
+                  </ul>
+                </div>
             </a>
           </li>
         ))
       }
     </ul>
-    <!-- Si hay más de 3 proyectos, renderizamos el botón de "Ver más" -->
     {
       projects.length > 6 && (
         <a
@@ -40,3 +57,19 @@ const projects = await Astro.glob("./_projects/*.md");
     }
   </div>
 </section>
+
+<style>
+  a:hover li > div {
+    background-color: #222;
+    color: #a3e635
+  }
+
+  li:hover > a {
+    border: 1px solid #a3e635;
+  }
+
+  li:hover > a > div > img {
+    border-bottom: 1px solid #a3e635;
+  }
+</style>
+

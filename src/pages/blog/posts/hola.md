@@ -1,7 +1,7 @@
 ---
 layout: "../../../layouts/PostLayout.astro"
 title: "¡Hello World!"
-date: "10 Jan, 2024"
+date: "2024-02-11"
 description: "Descripción del post"
 autor: "Sidney Silva"
 url: "hola"

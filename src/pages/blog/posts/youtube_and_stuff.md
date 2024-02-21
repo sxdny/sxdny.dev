@@ -1,7 +1,7 @@
 ---
 layout: "../../../layouts/PostLayout.astro"
 title: "Music page finished and stuff."
-date: "21 Jan, 2024"
+date: "2024-01-21"
 description: "Things about YouTube and stuff."
 autor: "Sidney Silva"
 url: "youtube_and_stuff"

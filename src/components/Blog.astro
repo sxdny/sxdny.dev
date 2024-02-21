@@ -1,14 +1,21 @@
 ---
 const posts = await Astro.glob("../pages/blog/posts/*.md");
+
+posts.sort((a, b) => {
+  return new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime();
+});
+
 ---
 
-<section class="flex w-screen justify-center pt-5 mt-5 py-5">
+<section class="flex sm:w-screen justify-center pt-5 mt-5 py-5">
   <div class="px-5 w-[47rem] flex flex-col gap-4 text-start text-gray-300">
     <h2 class="text-white tracking-tight text-xl sm:text-2xl font-heading font-medium antialiased">Blog</h2>
     <ul class="flex flex-col gap-5">
       <!-- Renderizamos los primeros 3 proyectos -->
       {
+
         posts.slice(0, 5).map((post) => (
+
           <li class="flex justify-between">
             <a
                 href=`/blog/posts/${post.frontmatter.url}`
@@ -22,7 +29,6 @@ const posts = await Astro.glob("../pages/blog/posts/*.md");
         ))
       }
 
-      <!-- Si hay más de 5 blogs, renderizamos el botón de "Todas las publicaciones" -->
         {
             posts.length > 5 && (
             <li class="flex justify-end">

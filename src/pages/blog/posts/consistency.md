@@ -1,7 +1,7 @@
 ---
 layout: "../../../layouts/PostLayout.astro"
 title: "The importance of consistency."
-date: "11 Jan, 2024"
+date: "2024-01-11"
 description: "Descripción del post"
 autor: "Sidney Silva"
 url: "consistency"

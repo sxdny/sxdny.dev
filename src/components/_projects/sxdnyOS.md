@@ -2,6 +2,8 @@
 title: "sxdnyOS"
 url: "https://github.com/sxdny/sxdnyOS"
 description: "My custom OS made in C++."
+img: "src/images/sxdnyOS.jpg"
+tags: ["C++", "Assembly"]
 ---
 
 # sxdnyOS
