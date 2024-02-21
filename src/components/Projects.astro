@@ -21,7 +21,7 @@ import { Badge } from "@/components/ui/badge"
               href={project.frontmatter.url}
             >
               <div>
-                <img src={project.frontmatter.img} alt="{project.frontmatter.title}" class="w-full rounded-t h-40 object-cover border-b border-neutral-700" />
+                <img src=`public/${project.frontmatter.img}` alt={project.frontmatter.title} class="w-full rounded-t h-40 object-cover border-b border-neutral-700" />
                 </div>
               <div class="p-3">
                 <h2 class="text-white font-heading font-medium tracking-tight text-base sm:text-lg">

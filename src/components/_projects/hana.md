@@ -2,7 +2,7 @@
 title: "Hana"
 url: "https://github.com/gethana/app"
 description: "Open-source todo app made with React."
-img: "/src/images/hana_landscape.jpg"
+img: "hana_landscape.jpg"
 tags: ["React", "TailwindCSS", "Supabase"]
 ---
 
