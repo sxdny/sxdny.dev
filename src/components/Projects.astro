@@ -2,6 +2,9 @@
 import ProjectView from "../components/ProjectView.astro";
 
 const projects = await Astro.glob("./_projects/*.md");
+
+import hanaLandscape from "../images/hana_landscape.jpg";
+import sxdnyOS from "../images/sxdnyOS.jpg";
 ---
 
 <section class="flex sm:w-screen justify-center pt-5">
@@ -15,9 +18,9 @@ const projects = await Astro.glob("./_projects/*.md");
     </h2>
     <ul class="sm:grid sm:grid-cols-2 flex flex-col gap-5">
       <!-- Renderizamos los primeros 3 proyectos -->
-      <ProjectView title={projects[0].frontmatter.title} description={projects[0].frontmatter.description} url={projects[0].frontmatter.url} img="../src/images/hana_landscape.jpg"  tags={projects[0].frontmatter.tags} />
+      <ProjectView title={projects[0].frontmatter.title} description={projects[0].frontmatter.description} url={projects[0].frontmatter.url} img={hanaLandscape.src}  tags={projects[0].frontmatter.tags} />
 
-      <ProjectView title={projects[1].frontmatter.title} description={projects[1].frontmatter.description} img="../src/images/sxdnyOS.jpg" url={projects[1].frontmatter.url} tags={projects[1].frontmatter.tags} />
+      <ProjectView title={projects[1].frontmatter.title} description={projects[1].frontmatter.description} img={sxdnyOS.src} url={projects[1].frontmatter.url} tags={projects[1].frontmatter.tags} />
     </ul>
     {
       projects.length > 6 && (
