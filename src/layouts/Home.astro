@@ -9,21 +9,22 @@ import Footer from "../components/Footer.astro";
 const { title } = Astro.props;
 ---
 
-<html class="h-full" lang="es">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>{title}</title>
-        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?" />
-        <Fonts />
-    </head>
-    <body class="bg-neutral-950 text-center flex flex-col h-full">
-        <Navbar name="sxdny" />
-        <div class="flex-grow py-5">
-            <Bio />
-            <Projects />
-            <Blog />
-        </div>
-        <Footer />
-    </body>
+<html prefix="og: https://ogp.me/ns#" class="h-full" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta data-rh property="og:image" content="/web_banner.jpg  " />
+    <title>{title}</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?" />
+    <Fonts />
+  </head>
+  <body class="bg-neutral-950 text-center flex flex-col h-full">
+    <Navbar name="sxdny" />
+    <div class="flex-grow py-5">
+      <Bio />
+      <Projects />
+      <Blog />
+    </div>
+    <Footer />
+  </body>
 </html>
