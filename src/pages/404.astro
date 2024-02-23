@@ -1,2 +1,43 @@
-<h2>404</h2>
-<p>No se ha encontrado la ruta...</p>
+---
+import Fonts from "@/components/Fonts.astro";
+import Navbar from "../components/Navbar.astro";
+import "src/styles/global.css";
+---
+
+<html class="h-full" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>404 - Página no encontrada</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?" />
+    <Fonts />
+  </head>
+  <body class="h-full bg-neutral-950 text-center flex flex-col">
+    <Navbar name="sxdny" />
+    <main class="h-full grid place-content-center">
+      <div class="flex flex-col gap-5">
+        <div class="flex flex-col gap-2">
+          <h1 class="text-7xl sm:text-8xl text-red-500">404</h1>
+          <p class="text-sm sm:text-md text-neutral-400">
+            La página que buscas no existe.
+          </p>
+          <p class="text-sm sm:text-md text-neutral-400 italic">
+            Si crees que esto es un error, por favor{" "}
+            <a
+              href="mailto:sidneysilva@skiff.com"
+              class="text-lime-300 hover:text-lime-400 transition-colors duration-300 ease-in-out"
+              >contáctame</a
+            >.
+          </p>
+        </div>
+
+        <a
+          href="/"
+          class="bg-neutral-900 text-white px-3 py-2 border rounded border-neutral-800 text-primary-500 hover:border-lime-300 hover:text-lime-300 transition-colors duration-300 ease-in-out hover:box-shadow-2xl hover:shadow-lg w-max mx-auto" 
+        >
+          Volver al inicio</a
+        >
+      </div>
+    </main>
+  </body>
+</html>
