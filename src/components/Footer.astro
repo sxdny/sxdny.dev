@@ -1,10 +1,9 @@
 ---
-
-import GithubOutlined from "@ant-design/icons/GithubOutlined";
-import TwitterOutlined from "@ant-design/icons/TwitterOutlined";
-import LinkedinFilled from "@ant-design/icons/LinkedinFilled";
-import InstagramOutlined from "@ant-design/icons/InstagramOutlined";
-import MailFilled from "@ant-design/icons/MailFilled";
+import Github from "./assets/Github.svg?raw";
+import Instagram from "./assets/Instagram.svg?raw";
+import Linkedin from "./assets/Linkedin.svg?raw";
+import Twitter from "./assets/Twitter.svg?raw";
+import Mail from "./assets/Mail.svg?raw";
 ---
 
 <footer
@@ -24,7 +23,7 @@ import MailFilled from "@ant-design/icons/MailFilled";
           rel="noopener noreferrer"
           class="text-lg sm:text-xl text-neutral-500 hover:text-lime-400"
         >
-          <GithubOutlined />
+          <Fragment class="fill-neutral-600 hover:fill-lime-400 w-5" set:html={Github} />
         </a>
       </li>
       <li>
@@ -33,7 +32,7 @@ import MailFilled from "@ant-design/icons/MailFilled";
           rel="noopener noreferrer"
           class="text-lg sm:text-xl text-neutral-500 hover:text-lime-400"
         >
-          <TwitterOutlined />
+          <Fragment class="fill-neutral-600 hover:fill-lime-400 w-5" set:html={Twitter} />
         </a>
       </li>
       <li>
@@ -42,7 +41,7 @@ import MailFilled from "@ant-design/icons/MailFilled";
           rel="noopener noreferrer"
           class="text-lg sm:text-xl text-neutral-500 hover:text-lime-400"
         >
-          <LinkedinFilled />
+          <Fragment class="fill-neutral-600 hover:fill-lime-400 w-5" set:html={Linkedin} />
         </a>
       </li>
       <li>
@@ -51,7 +50,7 @@ import MailFilled from "@ant-design/icons/MailFilled";
           rel="noopener noreferrer"
           class="text-lg sm:text-xl text-neutral-500 hover:text-lime-400"
         >
-          <InstagramOutlined />
+          <Fragment class="fill-neutral-600 hover:fill-lime-400 w-5" set:html={Instagram} />
         </a>
       </li>
       <li>
@@ -60,7 +59,7 @@ import MailFilled from "@ant-design/icons/MailFilled";
           rel="noopener noreferrer"
           class="text-lg sm:text-xl text-neutral-500 hover:text-lime-400"
         >
-          <MailFilled />
+          <Fragment class="fill-neutral-600 hover:fill-lime-400 w-5" set:html={Mail} />
         </a>
       </li>
     </ul>
