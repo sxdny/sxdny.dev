@@ -1,7 +1,5 @@
 ---
-import Navbar from "../../components/Navbar.astro";
 import Fonts from "../../components/Fonts.astro";
-import Footer from "../../components/Footer.astro";
 import 'src/styles/global.css'
 
 const title = "Sidney Silva | Blog";
@@ -22,7 +20,6 @@ posts.sort((a, b) => {
     <Fonts />
   </head>
   <body class="bg-neutral-950 text-center min-w-screen flex flex-col h-full">
-    <Navbar name="sxdny" />
 
     <section class="flex-grow flex w-screen justify-center p-5 mt-5">
       <div class="px-5 w-[47rem] flex flex-col gap-4 text-start text-gray-300">
@@ -66,6 +63,5 @@ posts.sort((a, b) => {
       </div>
     </section>
 
-    <Footer />
   </body>
 </html>
