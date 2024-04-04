@@ -5,7 +5,7 @@ import SidneySilva from "../components/assets/SS.astro";
 const { title } = Astro.props;
 ---
 
-<html prefix="og:https://ogp.me/ns#" class="h-full" lang="es">
+<html prefix="og:https://ogp.me/ns#" class="h-full dark" lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -13,18 +13,28 @@ const { title } = Astro.props;
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?" />
     <Fonts />
   </head>
-  <body class="bg-white text-center flex flex-col h-full justify-center">
+  <body class="bg-white dark:bg-black text-center flex flex-col h-full justify-center">
     <!-- Este div es el contenedor del svg -->
     <div style="aspect-ratio: inherit;" class="flex justify-center w-full p-10 text-center">
 
-      <SidneySilva class="fill-white"></SidneySilva>
+      <SidneySilva></SidneySilva>
 
       </div>
       
       
     </div>
   </body>
-  <script>
-    console.log("%c</3", "color: black; font-size: 2rem; font-weight: bold;");
-  </script>
 </html>
+
+<script>
+  // It's best to inline this in `head` to avoid FOUC (flash of unstyled content) when changing pages or themes
+  if (
+    localStorage.getItem('color-theme') === 'dark' ||
+    (!('color-theme' in localStorage) &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches)
+  ) {
+    document.documentElement.classList.add('dark');
+  } else {
+    document.documentElement.classList.remove('dark');
+  }
+</script>
