@@ -63,8 +63,10 @@ const { title } = Astro.props;
           
         </div>
         <div class="md:w-1/2">
-          <div class="flex flex-col gap-2">
-            <img class="h-[20rem] w-[16rem]" src="/public/me.JPG" alt="me" srcset="">
+          <!-- Desde la carpeta /public/. La carpeta ya está integrada
+          digamos en el path -->
+          <div class="flex flex-col items-start gap-2">
+            <img class="h-[22rem]" src="/me.JPG" alt="me" srcset="">
             <p class="dark:text-neutral-400 text-neutral-600 text-xs italic">
               Me at the beach. 04/2024
             </p>
