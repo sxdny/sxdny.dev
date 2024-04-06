@@ -1,95 +1,96 @@
----
-import Fonts from "../components/Fonts.astro";
-import SidneySilva from "../components/assets/SS.astro";
-import Navbar from "@/components/Navbar.astro";
-import Link from "@/components/Link.astro";
-
-const { title } = Astro.props;
----
-
-<html prefix="og:https://ogp.me/ns#" class="h-full" lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title}</title>
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?" />
-    <Fonts />
-  </head>
-  <body class="bg-white dark:bg-[#020303] text-center flex flex-col h-full ">
-    <!-- Este div es el contenedor del svg -->
-    <div style="aspect-ratio: inherit;" class="flex flex-col items-center w-full p-10">
-
-      <Navbar />
-
-      <SidneySilva></SidneySilva>
-
-      <section class="dark:text-neutral-300 leading-relaxed text-start text-sm flex flex-col md:flex-row gap-12 max-w-[80rem]">
-        <div class="flex flex-col gap-12 md:w-3/4">
-
-          <div class="flex flex-col gap-4">
-            <p>
-              A <b> web developer </b> at the dawn of my professional career. With a fresh and innovative approach to technology.
-            </p>
-            <p>
-              My journey is driven by a fervent desire to not only meet the expectations set before me but to exceed them, by delivering projects that are as meticulously detailed as they are technologically advanced.
-            </p>
-            <p>
-              I’m currently looking for a job, so if you want that product that you are thinking about right know, <Link url="mailto:sidnesbo@icloud.com" title="talk to me!" />
-            </p>
-          </div>
-
-          <div>
-            <h1 class="text-2xl font-bold">Socials</h1>
-            <ul class="flex gap-2 py-2">
-              <li>
-                <Link title="Linkedin" url="https://www.linkedin.com/in/sidney-silva-aa7b3b1b4/" />
-              </li>
-              <li>
-                <Link title="Github" url="https://github.com/sxdny" />
-              </li>
-              <li>
-                <Link title="Twitter" url="https://twitter.com/sxdny" />
-              </li>
-              <li>
-                <Link title="Mail" url="mailto:sidneysbo@icloud.com" />
-              </li>
-              <li>
-                <Link title="Instagram" url="https://www.instagram.com/sxdnydev/" />
-              </li>
-                
-            </ul>
-            
-          </div>
+          ---
+          import Fonts from "../components/Fonts.astro";
+          import SidneySilva from "../components/assets/SS.astro";
+          import Navbar from "@/components/Navbar.astro";
+          import Link from "@/components/Link.astro";
           
-        </div>
-        <div class="md:w-1/2">
-          <!-- Desde la carpeta /public/. La carpeta ya está integrada
-          digamos en el path -->
-          <div class="flex flex-col items-start gap-2">
-            <img class="h-[22rem]" src="/me.JPG" alt="me" srcset="">
-            <p class="dark:text-neutral-400 text-neutral-600 text-xs italic">
-              Me at the beach. 04/2024
-            </p>
-          </div>
-        </div>
-      </section>
-
-      </div>
-      
-      
-    </div>
-  </body>
-</html>
-
-<script>
-  // // It's best to inline this in `head` to avoid FOUC (flash of unstyled content) when changing pages or themes
-  // if (
-  //   localStorage.getItem('color-theme') === 'dark' ||
-  //   (!('color-theme' in localStorage) &&
-  //     window.matchMedia('(prefers-color-scheme: dark)').matches)
-  // ) {
-  //   document.documentElement.classList.add('dark');
-  // } else {
-  //   document.documentElement.classList.remove('dark');
-  // }
-</script>
+          const { title } = Astro.props;
+          ---
+          
+          <html prefix="og:https://ogp.me/ns#" class="h-full" lang="es">
+            <head>
+              <meta charset="utf-8" />
+              <meta name="viewport" content="width=device-width, initial-scale=1" />
+              <title>{title}</title>
+              <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?" />
+              <Fonts />
+            </head>
+            <body class="bg-white dark:bg-[#020303] text-center flex flex-col h-full ">
+              <!-- Este div es el contenedor del svg -->
+              <div style="aspect-ratio: inherit;" class="flex flex-col items-center w-full p-10">
+          
+                <Navbar />
+          
+                <SidneySilva></SidneySilva>
+          
+                <section class="dark:text-neutral-300 leading-relaxed text-start text-sm flex flex-col md:flex-row gap-12 max-w-[80rem]">
+                  <div class="flex flex-col gap-12 md:w-3/4">
+          
+                    <div class="flex flex-col gap-4">
+                      <p>
+                        A <b> web developer </b> at the dawn of my professional career. With a fresh and innovative approach to technology.
+                      </p>
+                      <p>
+                        My journey is driven by a fervent desire to not only meet the expectations set before me but to exceed them, by delivering projects that are as meticulously detailed as they are technologically advanced.
+                      </p>
+                      <p>
+                        I’m currently looking for a job, so if you want that product that you are thinking about right know, <Link url="mailto:sidnesbo@icloud.com" title="talk to me!" />
+                      </p>
+                    </div>
+          
+                    <div>
+                      <h1 class="text-2xl font-bold">Socials</h1>
+                      <ul class="flex gap-2 py-2">
+                        <li>
+                          <Link title="Linkedin" url="https://www.linkedin.com/in/devsidney/" />
+                        </li>
+                        <li>
+                          <Link title="Github" url="https://github.com/sxdny" />
+                        </li>
+                        <li>
+                          <Link title="Twitter" url="https://twitter.com/sxdny" />
+                        </li>
+                        <li>
+                          <Link title="Mail" url="mailto:sidneysbo@icloud.com" />
+                        </li>
+                        <li>
+                          <Link title="Instagram" url="https://www.instagram.com/sxdnydev/" />
+                        </li>
+                          
+                      </ul>
+                      
+                    </div>
+                    
+                  </div>
+                  <div class="md:w-1/2">
+                    <!-- Desde la carpeta /public/. La carpeta ya está integrada
+                    digamos en el path -->
+                    <div class="flex flex-col items-start gap-2">
+                      <img class="h-[22rem]" src="/me.JPG" alt="me" srcset="">
+                      <p class="dark:text-neutral-400 text-neutral-600 text-xs italic">
+                        Me at the beach. 04/2024
+                      </p>
+                    </div>
+                  </div>
+                </section>
+          
+                </div>
+                
+                
+              </div>
+            </body>
+          </html>
+          
+          <script>
+            // // It's best to inline this in `head` to avoid FOUC (flash of unstyled content) when changing pages or themes
+            // if (
+            //   localStorage.getItem('color-theme') === 'dark' ||
+            //   (!('color-theme' in localStorage) &&
+            //     window.matchMedia('(prefers-color-scheme: dark)').matches)
+            // ) {
+            //   document.documentElement.classList.add('dark');
+            // } else {
+            //   document.documentElement.classList.remove('dark');
+            // }
+          </script>
+          
