@@ -1,9 +1,8 @@
 ---
-const {url, title} = Astro.props;
+const {url, title, variant} = Astro.props;
 
 // TODO: Hacer que el link se resalte cuando ya se esté en la misma página
 ---
-
 <a class="hover:underline underline-offset-4 dark:text-white" href=`${url}`>
   {title}
 </a>

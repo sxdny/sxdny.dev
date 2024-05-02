@@ -7,34 +7,83 @@ import "src/styles/global.css";
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>404 - Página no encontrada</title>
+    <title>404</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?" />
     <Fonts />
   </head>
-  <body class="h-full bg-neutral-950 text-center flex flex-col">
+  <body class="h-full bg-black text-center flex flex-col">
     <main class="h-full grid place-content-center">
       <div class="flex flex-col gap-5">
         <div class="flex flex-col gap-2">
-          <h1 class="text-7xl sm:text-8xl text-red-500">404</h1>
-          <p class="text-sm sm:text-md text-neutral-400">
-            La página que buscas no existe.
-          </p>
-          <p class="text-sm sm:text-md text-neutral-400 italic">
-            Si crees que esto es un error, por favor{" "}
-            <a
-              href="mailto:sidneysilva@skiff.com"
-              class="text-lime-300 hover:text-lime-400 transition-colors duration-300 ease-in-out"
-              >contáctame</a
-            >.
-          </p>
+          <svg
+          class="scale-[2] self-center"
+            width="126"
+            height="48"
+            viewBox="0 0 126 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M28.5521 1.328V30.32H35.6561V36.72H28.5521V46.896H20.8721V36.72H0.00805664V29.04L21.2561 1.328H28.5521ZM7.04806 30.32H20.8721V12.464H20.7441L7.04806 30.32Z"
+              fill="url(#paint0_linear_347_56)"></path>
+            <path
+              d="M62.872 47.792C57.24 47.792 52.952 45.7653 50.008 41.712C47.1067 37.6587 45.656 31.7493 45.656 23.984C45.656 16.2613 47.128 10.416 50.072 6.44801C53.016 2.43734 57.304 0.432007 62.936 0.432007C68.5253 0.432007 72.7707 2.43734 75.672 6.44801C78.616 10.416 80.088 16.2613 80.088 23.984C80.088 31.7493 78.616 37.6587 75.672 41.712C72.728 45.7653 68.4613 47.792 62.872 47.792ZM55.832 37.04C57.368 39.8133 59.736 41.2 62.936 41.2C66.136 41.2 68.4827 39.8133 69.976 37.04C71.4693 34.2667 72.216 29.936 72.216 24.048C72.216 18.16 71.448 13.8507 69.912 11.12C68.4187 8.38934 66.072 7.02401 62.872 7.02401C59.672 7.02401 57.304 8.38934 55.768 11.12C54.2747 13.8507 53.528 18.16 53.528 24.048C53.528 29.9787 54.296 34.3093 55.832 37.04Z"
+              fill="url(#paint1_linear_347_56)"></path>
+            <path
+              d="M118.632 1.328V30.32H125.736V36.72H118.632V46.896H110.952V36.72H90.088V29.04L111.336 1.328H118.632ZM97.128 30.32H110.952V12.464H110.824L97.128 30.32Z"
+              fill="url(#paint2_linear_347_56)"></path>
+            <defs>
+              <linearGradient
+                id="paint0_linear_347_56"
+                x1="102.5"
+                y1="-24.104"
+                x2="21.5001"
+                y2="95.396"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="white"></stop>
+                <stop offset="1" stop-color="#1E1D1D"></stop>
+              </linearGradient>
+              <linearGradient
+                id="paint1_linear_347_56"
+                x1="105.947"
+                y1="-24.104"
+                x2="24.947"
+                y2="95.396"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="white"></stop>
+                <stop offset="1" stop-color="#1E1D1D"></stop>
+              </linearGradient>
+              <linearGradient
+                id="paint2_linear_347_56"
+                x1="109.33"
+                y1="-24.104"
+                x2="28.33"
+                y2="95.396"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="white"></stop>
+                <stop offset="1" stop-color="#1E1D1D"></stop>
+              </linearGradient>
+            </defs>
+          </svg>
         </div>
 
-        <a
+        <div class="flex gap-2 m-10">
+          <p class="text-neutral-500">
+            Page not found... -->
+          </p>
+          <a
           href="/"
-          class="bg-neutral-900 text-white px-3 py-2 border rounded border-neutral-800 text-primary-500 hover:border-lime-300 hover:text-lime-300 transition-colors duration-300 ease-in-out hover:box-shadow-2xl hover:shadow-lg w-max mx-auto" 
+          class="text-neutral-300 hover:text-white transition hover:underline
+          underline-offset-4"
         >
-          Volver al inicio</a
+          Go Home</a
         >
+        </div>
+
+       
       </div>
     </main>
   </body>
