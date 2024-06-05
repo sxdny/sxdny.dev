@@ -2,6 +2,7 @@
 import Fonts from "../components/Fonts.astro";
 
 const { title } = Astro.props;
+const { classes } = Astro.props;
 ---
 
 <html prefix="og:https://ogp.me/ns#" class="h-full" lang="es">
@@ -12,67 +13,8 @@ const { title } = Astro.props;
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?" />
     <Fonts />
   </head>
-  <body class="bg-black flex flex-col justify-center text-center h-full">
+  <body class={classes}>
    
-    <svg
-    class="self-center hover:scale-125 transition duration-[2000ms] m-5"
-      width="200"
-      height="146"
-      viewBox="0 0 200 146"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M0 146L99.8043 146L200 0.794525L0 146Z"
-        fill="url(#paint0_radial_346_34)"></path>
-      <defs>
-        <radialGradient
-          id="paint0_radial_346_34"
-          cx="0"
-          cy="0"
-          r="1"
-          gradientUnits="userSpaceOnUse"
-          gradientTransform="translate(100 73.3973) rotate(90) scale(72.6027 100)"
-        >
-          <stop stop-color="#D9D9D9"></stop>
-          <stop offset="1" stop-color="#737373"></stop>
-        </radialGradient>
-      </defs>
-    </svg>
-
-    <div>
-      <ul class="flex gap-10 m-10 text-center justify-center">
-        <li class="text-neutral-500 hover:text-white transition hover:underline
-        underline-offset-4">
-          <a href="/aboutme">
-            About
-          </a>
-        </li>
-        <li class="text-neutral-500 hover:text-white transition hover:underline
-        underline-offset-4">
-          <a href="https://portfolio.sxdny.dev">
-            Portfolio
-          </a>
-        </li>
-        <li class="text-neutral-500 hover:text-white transition hover:underline
-        underline-offset-4">
-          <a href="https://blog.sxdny.dev">
-            Blog
-          </a>
-        </li>
-        <li class="text-neutral-500 hover:text-white transition hover:underline
-        underline-offset-4">
-          <a href="/media">
-            Media
-          </a>
-        </li>
-      </ul>
-    </div>
-
-    <!-- Poner aqui unos links a otras paginas (portfolioo, media, etc.) -->
-
-    <script>
-      // Poner aqui un script guapo...
-    </script>
-  </body><!-- Desde la carpeta /public/. La carpeta ya está integrada
-          digamos en el path -->
+    <slot />
+  </body>
 </html>
