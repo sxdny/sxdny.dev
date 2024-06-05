@@ -1,5 +1,6 @@
 ---
 import Home from "../layouts/Home.astro";
+import Navbar from "@/components/Navbar.astro";
 import "src/styles/global.css";
 ---
 
@@ -7,91 +8,8 @@ import "src/styles/global.css";
   classes="flex flex-col min-h-screen bg-black gap-4"
   title="Sidney Silva"
 >
-  <div class="flex-grow m-8 flex flex-col gap-2">
-    <div>
-      <h1 class="text-white text-4xl font-bold mb-2">Sidney Silva</h1>
-      <p class="text-white">
-        Soy un desarrollador web al que le gusta probar cosas nuevas y hacer
-        software de calidad y que mejore la vida de las personas.
-      </p>
-    </div>
-
-    <div>
-      <h2 class="text-white text-2xl font-bold">Proyectos</h2>
-      <ul>
-        <li>
-          <p class="text-neutral-300">Aún no tengo proyectos para mostrar...</p>
-        </li>
-      </ul>
-    </div>
-
-    <div class="flex flex-col gap-2">
-      <header>
-        <h2 class="text-white text-2xl font-bold">Habilidades</h2>
-        <p class="text-neutral-300">
-          Las cosas que más utilizo el dia a dia para desarrollar las
-          aplicaciones.
-        </p>
-      </header>
-
-      <section class="grid grid-cols-1 md:grid-cols-2 gap-1">
-        <div class="flex flex-col gap-1">
-          <h3 class="text-lg text-white">Lenguajes multiparadigma:</h3>
-          <ul class="text-neutral-300 list-disc ml-5">
-            <li>JavaScript - Medio</li>
-            <li>Java - Alto</li>
-            <li>PHP - Medio</li>
-            <li>Rust - Básico</li>
-          </ul>
-        </div>
-
-        <div class="flex flex-col gap-1">
-          <h3 class="text-lg text-white">Frameworks y librerías:</h3>
-          <ul class="text-neutral-300 list-disc ml-5">
-            <li>React</li>
-            <li>Vue</li>
-            <li>Angular</li>
-          </ul>
-        </div>
-
-        <div class="flex flex-col gap-1">
-          <h3 class="text-lg text-white">Herramientas:</h3>
-          <ul class="text-neutral-300 list-disc ml-5">
-            <li>Git</li>
-            <li>GitHub</li>
-            <li>Postman</li>
-            <li>Github Copilot</li>
-            <li>VSCode</li>
-          </ul>
-        </div>
-      </section>
-    </div>
-  </div>
-  <footer class="flex flex-col gap-1 md:gap-5 md:flex-row justify-between p-8 mt-auto">
-    <p class="text-white">
-        Sidney Silva Braz de Oliveira &copy; 2024
-    </p>
-      <ul class="flex gap-2 justify-between text-neutral-300">
-        <li>
-          <a class="underline underline-offset-2 hover:text-white" href="#">
-            Instagram
-          </a>
-        </li>
-        <li>
-          <a class="underline underline-offset-2 hover:text-white" href="#">
-            Twitter
-          </a>
-        </li>
-        <li>
-          <a class="underline underline-offset-2 hover:text-white" href="#">
-            LinkedIn
-          </a>
-        </li>
-        <li>
-          <a class="underline underline-offset-2 hover:text-white" href="#">
-            GitHub
-          </a>
-        </li>
-      </ul>
-  </footer>
+  <Navbar />
+  <div class="flex flex-col items-center justify-center flex-1">
+    <h1 class="text-xl font-bold text-white">En desarrollo</h1>
+    <p class="text-neutral-300 text-sm">Pronto lo tendré listo</p>
 </Home>
