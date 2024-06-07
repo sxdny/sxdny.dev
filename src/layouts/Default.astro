@@ -1,8 +1,8 @@
 ---
 import Fonts from "../components/Fonts.astro";
+import Navbar from "@/components/Navbar.astro";
 
 const { title } = Astro.props;
-const { classes } = Astro.props;
 ---
 
 <html prefix="og:https://ogp.me/ns#" class="h-full" lang="es">
@@ -13,7 +13,8 @@ const { classes } = Astro.props;
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?" />
     <Fonts />
   </head>
-  <body class={classes}>
+  <body class="flex flex-col min-h-screen bg-black gap-4 items-center">
+    <Navbar />
     <slot />
   </body>
 </html>

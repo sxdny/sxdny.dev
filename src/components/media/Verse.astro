@@ -1,0 +1,10 @@
+---
+const { reference, text, add_classes } = Astro.props;
+---
+
+<div class=`flex h-fit flex-col bg-neutral-800 p-5 border-l rounded-r-lg gap-2 ${add_classes}`>
+  <div class="flex flex-col gap-2">
+    <h2 class="text-white">{reference}</h2>
+    <p class="text-neutral-300 text-sm">{text}</p>
+  </div>
+</div>

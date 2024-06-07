@@ -1,0 +1,52 @@
+---
+import Home from "@/layouts/Default.astro";
+
+import Verse from "@/components/media/Verse.astro";
+import Music from "@/components/media/Music.astro";
+import Image from "@/components/media/Image.astro";
+
+import "src/styles/global.css";
+---
+
+<!-- Poner aquí todos los componentes y tal: verso, links, etc. -->
+<Home title="Sidney Silva | Media">
+  <main class="max-w-screen-md w-full p-4 flex flex-col gap-10 text-white">
+    <header class="flex flex-col gap-2">
+      <h1 class="text-4xl font-bold">Media</h1>
+      <p class="text-lg text-neutral-300">
+        This is a collection of media of the Internet or that I collect that is
+        interesting / inpirational to me.
+      </p>
+    </header>
+    <section
+      class="grid grid-cols-3 grid-rows-[repeat(8,200px)] gap-8 items-center"
+    >
+      <!-- Poner aquí todo junto, sin separar ni nada -->
+
+      <Verse
+        text="For the word of God is living and active, sharper than any two-edged sword, piercing to the division of soul and of spirit, of joints and of marrow, and discerning the thoughts and intentions of the heart."
+        reference="Hebrews 4:12"
+        add_classes="col-span-3"
+      />
+
+      <Music
+        title="Whole Lotta Red"
+        artist="Playboi Carti"
+        url="https://t2.genius.com/unsafe/1852x0/https%3A%2F%2Fimages.genius.com%2F363daa5b73302cf7d5ad317141090c1b.1000x1000x1.png"
+        date="07-06-2024"
+      />
+
+      <Music
+        title="XTENDED"
+        artist="Ken Carson"
+        url="https://t2.genius.com/unsafe/1852x0/https%3A%2F%2Fimages.genius.com%2Fe825e6c685e0a318462181f5fe3bf223.1000x1000x1.png"
+        date="07-06-2024"
+      />
+
+      <Image
+        url="https://t2.genius.com/unsafe/1852x0/https%3A%2F%2Fimages.genius.com%2F9707d12a3aa440b938a76344adb5a954.1000x1000x1.jpg"
+        add_classes="col-span-1"
+      />
+    </section>
+  </main>
+</Home>

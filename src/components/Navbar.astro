@@ -4,19 +4,21 @@ import Link from "./Link.astro";
 
 <div class="w-full flex flex-col items-center">
   <nav class="max-w-screen-md w-full p-4 flex justify-between">
-    <h1 class="text-white">Sidney Silva</h1>
+    <h1 class="text-white">
+        <Link url="/">Sidney Silva</Link>
+    </h1>
     <ul class="flex gap-3">
         <li>
-            <Link href="/">Home</Link>
+            <Link url="/about">About me</Link>
         </li>
         <li>
-            <Link href="/about">About me</Link>
+            <Link url="/blog">Blog</Link>
         </li>
         <li>
-            <Link href="/blog">Blog</Link>
+            <Link url="/photos">Photos</Link>
         </li>
         <li>
-            <Link href="/photos">Photos</Link>
+            <Link url="/media">Media</Link>
         </li>
     </ul>
   </nav>
