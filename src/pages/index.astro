@@ -3,10 +3,102 @@ import Default from "../layouts/Default.astro";
 import "src/styles/global.css";
 ---
 
-<Default
-  title="Sidney Silva"
->
-  <div class="flex flex-col items-center justify-center flex-1">
-    <h1 class="text-xl font-bold text-white">En desarrollo</h1>
-    <p class="text-neutral-300 text-sm">Pronto lo tendré listo</p>
-</>
+<Default title="Sidney Silva">
+  <div class="flex flex-col max-w-screen-md w-full p-4">
+    <div class="flex flex-col gap-1">
+      <h1 class="text-white text-2xl md:text-4xl font-semibold">Welcome to my site!</h1>
+      <p class="text-md md:text-lg text-neutral-300">
+        Here you can discover more about me, see my blog posts and more. Also,
+        visit my <a
+          href="https://www.youtube.com/channel/UCucktcO-wioFdxoVusKuH6A"
+          class="text-white underline underline-offset-4">Youtube Channel</a
+        > for more content.
+      </p>
+    </div>
+  </div>
+  <div class="flex-1 flex flex-col max-w-screen-md w-full">
+    <div class="flex-1 w-full h-full text-white grid md:grid-cols-6 grid-rows-auto">
+      <div class="flex col-span-4 w-full h-full p-4">
+        <div
+          class="flex-1 flex flex-col bg-neutral-900 rounded rounded-lg border border-neutral-600 w-full h-full"
+        >
+          <div class="w-full flex flex-col gap-1 p-5">
+            <h1 class="text-white text-xl md:text-2xl font-semibold">Portfolio</h1>
+            <p class="text-neutral-400 text-md md:text-xl">
+              Check my portfolio if you are interested on working with me for
+              any project.
+            </p>
+          </div>
+          <img class="ml-10 mt-5 rounded-ss-lg border-s border-t border-neutral-800 " src="home-portfolio.png" alt="" srcset="" />
+        </div>
+      </div>
+
+      <div class="flex col-span-3 sm:col-span-1 md:col-span-2 w-full h-full p-4">
+        <div
+          class="flex-1 flex flex-col bg-neutral-900 rounded rounded-lg border border-neutral-600 w-full h-full"
+        >
+          <div class="w-full flex flex-col gap-1 pt-5 px-5">
+            <h1 class="text-white text-xl md:text-2xl font-semibold">Blog</h1>
+            <p class="text-neutral-400 text-md md:text-xl">
+              See my blog posts. New post every week.
+            </p>
+          </div>
+          <div class="flex md:p-0 py-4 sm:flex-col gap-1 flex-1 justify-center items-center">
+            <p class="text-7xl md:text-9xl">
+              🤓
+            </p>
+            <p class="text-7xl md:text-9xl">
+              ✍
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex col-span-3 w-full h-full p-4">
+        <div
+          class="flex-1 flex flex-col bg-neutral-900 rounded rounded-lg border border-neutral-600 w-full h-full"
+        >
+          <div class="w-full flex flex-col gap-1 pt-5 px-5">
+            <h1 class="text-white text-xl md:text-2xl font-semibold">Photos</h1>
+            <p class="text-neutral-400 text-md md:text-xl">
+              Some of my favourite photos. Shot by me.
+            </p>
+          </div>
+          <div class="rounded-lg border border-neutral-700 flex-1 grid grid-cols-6 grid-rows-3 m-4">
+            <img class="rounded-ss-lg col-span-3 col-start-1 row-start-1 row-span-2 z-10" src="/helado.jpeg" alt="" srcset="">
+            <img class="rounded-bl-lg col-span-4 row-span-2 row-start-2 col-start-1" src="/futbol-madrid.jpeg" alt="" srcset="">
+            <img class="rounded-tr-lg row-start-1 col-start-3 col-span-4 row-span-3" src="/coche-casa.jpeg" alt="" srcset="">
+            <img class="rounded-br-lg row-start-3 h-full col-start-5 col-end-7" src="/sunset-park.jpeg" alt="" srcset="">
+          </div>
+        </div>
+      </div>
+
+      <div class="flex col-span-4 md:col-span-3 w-full h-full p-4">
+        <div
+          class="flex-1 flex flex-col bg-neutral-900 rounded rounded-lg border border-neutral-600 w-full"
+        >
+          <div class="w-full flex flex-col gap-1 p-5">
+            <h1 class="text-white text-xl md:text-2xl font-semibold">Media</h1>
+            <p class="text-neutral-400 text-md md:text-xl">
+              Cool media that I find on the Internet, books and more.
+            </p>
+          </div>
+          <div class="flex-1 flex flex-col p-4 items-center ">
+            <img class="rounded border border-neutral-800" src="https://t2.genius.com/unsafe/1972x0/https%3A%2F%2Fimages.genius.com%2Fe825e6c685e0a318462181f5fe3bf223.1000x1000x1.png" alt="" srcset="">
+            <div class="py-2 flex flex-col text-start items-start justify-start w-full">
+              <p class="text-white text-md md:text-lg">XTENDED</p>
+              <p class="text-neutral-400 text-md md:text-lg">Ken Carson</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="flex flex-col items-center bg-white w-full p-4 mt-10 bg-neutral-900 border-t border-neutral-700 text-[0.75rem] md:text-sm">
+    <div class="flex justify-between max-w-screen-md w-full p-4">
+      <h1 class="text-neutral-500">Sidney Silva - 2024</h1>
+      <p class="text-neutral-500">You can always be better.</p>
+    </div>
+  </footer>
+</Default>
