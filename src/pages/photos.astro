@@ -10,13 +10,12 @@ import "src/styles/global.css"
       Just some photos that I like. Shot by me.
     </p>
   </div>
-  <div class="flex flex-1 flex-col max-w-screen-md w-full bg-neutral-700 p-4">
-    <div class="w-full grid grid-cols-3 gap-2">
-      <img src="/coche-casa.jpeg" alt="" srcset="">
-      <img src="/helado.jpeg" alt="" srcset="">
-      <img src="/futbol-madrid.jpeg" alt="" srcset="">
-      <img src="/sunset-park.jpeg" alt="" srcset="">
-      <img src="/me.JPG" alt="">
+  <div class="flex flex-1 flex-col max-w-screen-md w-full p-4">
+    <div class="w-full grid grid-cols-2 md:grid-cols-3 grid-rows-bento-default gap-2">
+      <img class="col-start-1 rounded rounded-lg border border-neutral-700" src="/coche-casa.jpeg" alt="" srcset="">
+      <img class="col-span-2 rounded rounded-lg border border-neutral-700" src="/helado.jpeg" alt="" srcset="">
+      <img class="row-start-2 rounded rounded-lg border border-neutral-700" src="/futbol-madrid.jpeg" alt="" srcset="">
+      <img class="row-start-3 rounded rounded-lg border border-neutral-700" src="/sunset-park.jpeg">
     </div>
   </div>
 </Default>

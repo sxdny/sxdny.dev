@@ -18,6 +18,9 @@ export default {
       'inter': ['Inter', 'sans-serif'],
     },
     extend: {
+      gridTemplateRows: {
+        'bento-default': 'repeat(3, 20rem)',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
