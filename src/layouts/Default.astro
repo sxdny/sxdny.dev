@@ -1,4 +1,5 @@
 ---
+import Navbar from "@/components/Navbar.astro";
 import Fonts from "../components/Fonts.astro";
 
 const { title } = Astro.props;
@@ -12,7 +13,8 @@ const { title } = Astro.props;
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?" />
     <Fonts />
   </head>
-  <body class="flex flex-col min-h-screen bg-neutral-50 gap-4 items-center">
+  <body class="flex flex-col min-h-screen dark:bg-black bg-neutral-50 gap-4 items-center">
+    <Navbar />
     <slot />
   </body>
 </html>
