@@ -1,14 +1,8 @@
 ---
-import Default from "../layouts/Default.astro";
-import "src/styles/global.css";
-
+import Layout from '../layouts/Layout.astro';
+import Home from "../components/Home.astro" 
 ---
 
-<Default title="Sidney Silva">
-    <div class="flex max-w-screen-md w-screen flex-1 place-items-center justify-center">
-      <div>
-        <h1 class="font-semibold text-xl">Not ready yet. 🏗️</h1>
-        <p class="text-sm text-neutral-600">Something new is about to come.</p>        
-      </div>
-    </div>
-</Default>
+<Layout>
+	<Home />
+</Layout>
