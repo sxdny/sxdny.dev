@@ -1,0 +1,100 @@
+---
+import socials from "../data/socials.json";
+import websites from "../data/websites.json";
+---
+
+<main class="flex flex-col gap-8">
+  <div>
+    <h2 class="text-neutral-200 text-3xl font-mono pb-3">
+      Welcome to my webpage!
+    </h2>
+    <div
+      class="text-neutral-400 text-sm flex flex-col gap-2 max-w-[50rem] leading-6 tracking-wide text-pretty"
+    >
+      <p>
+        My name is Sidney Silva and I'm a Web Developer from Spain. My favourite
+        languages are JavaScript, Rust and PHP. I'm currently working on some
+        <a
+          class="text-white underline underline-offset-2"
+          href="https://portfolio.sxdny.dev">projects</a
+        > with Laravel and Next.js, and I'm also learning Rust in my free time.
+      </p>
+      <p>
+        Despite being a Web Developer, my main goal is to become a Software
+        Engineer and work on projects that can make a difference in the world.
+        Maybe develop a new operating system, improoving AI or even working on
+        the next big thing in the tech industry.
+      </p>
+    </div>
+  </div>
+
+  <div>
+    <h3 class="text-neutral-300 text-xl font-mono pb-3">Links</h3>
+    <ul class="flex justify-start gap-4">
+      {
+        socials.map((social, i, socials) => {
+          if (i + 1 === socials.length) {
+            return (
+              <li>
+                <a
+                  class="text-white underline underline-offset-2"
+                  href={social.url}
+                >
+                  {social.name}
+                </a>
+              </li>
+            );
+          } else {
+            return (
+              <li>
+                <a
+                  class="text-white underline underline-offset-2"
+                  href={social.url}
+                >
+                  {social.name}
+                </a>
+              </li>
+              <span class="text-neutral-400"> / </span>
+            );
+          }
+        })
+      }
+    </ul>
+  </div>
+
+  <div>
+   <h3 class="text-neutral-300 text-xl font-mono pb-3">
+     My other websites
+   </h3>
+   <ul class="flex justify-start gap-4">
+     {
+       websites.map((website, i, websites) => {
+         if (i + 1 === websites.length) {
+           return (
+             <li>
+               <a
+                 class="text-white underline underline-offset-2"
+                 href={website.url}
+               >
+                 {website.name}
+               </a>
+             </li>
+           );
+         } else {
+           return (
+             <li>
+               <a
+                 class="text-white underline underline-offset-2"
+                 href={website.url}
+               >
+                 {website.name}
+               </a>
+             </li>
+             <span class="text-neutral-400"> / </span>
+           );
+         }
+       })
+     }
+   </ul>
+ </div>
+</main>

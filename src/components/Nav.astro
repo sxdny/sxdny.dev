@@ -1,0 +1,15 @@
+---
+let date = new Date();
+const today = date.getDate() + "/" + date.getMonth() + 1 + "/" + date.getFullYear()
+---
+
+<nav class="flex justify-between items-center px-1 pb-5">
+ <header>
+  <a class="text-white font-mono text-lg" href="/">sxdny.dev</a>
+ </header>
+ <footer>
+  <p class="text-neutral-500 text-sm font-mono">
+   {today}
+  </p>
+ </footer>
+</nav>
