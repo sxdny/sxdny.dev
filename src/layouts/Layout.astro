@@ -21,12 +21,14 @@ import Footer from "../components/Footer.astro"
 
     <title>sxdny.dev</title>
   </head>
-  <body class="bg-neutral-900 min-h-screen p-5 flex flex-col">
-				<Nav />
-				<div class="flex-1">
-					<slot />
-				</div>
-				<Footer />
+  <body class="bg-neutral-900 min-h-screen p-5 flex flex-col items-center">
+    <div class="max-w-[55rem] w-full flex flex-col h-full items-center">
+      <Nav />
+      <div class="flex-1 w-full">
+        <slot />
+      </div>
+      <Footer />
+    </div>
   </body>
 </html>
 

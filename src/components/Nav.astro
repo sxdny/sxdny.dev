@@ -1,15 +1,15 @@
----
-let date = new Date();
-const today = date.getDate() + "/" + date.getMonth() + 1 + "/" + date.getFullYear()
----
-
-<nav class="flex justify-between items-center px-1 pb-5">
+<nav class="flex gap-3 flex-col md:flex-row justify-between md:items-center mb-10 w-full justify-self-center">
  <header>
   <a class="text-white font-mono text-lg" href="/">sxdny.dev</a>
  </header>
  <footer>
-  <p class="text-neutral-500 text-sm font-mono">
-   {today}
-  </p>
+  <ul class="flex items-center gap-4 text-sm text-neutral-500">
+   <li>
+    <a class="hover:text-white" href="https://portfolio.sxdny.dev">Portfolio</a>
+   </li>
+   <li>
+    <a class="hover:text-white" href="https://blog.sxdny.dev">Blog</a>
+   </li>
+  </ul>
  </footer>
 </nav>
